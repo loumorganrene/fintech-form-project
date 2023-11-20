@@ -1,1 +1,21 @@
+:root {
+  --primary-clr: #4169e1;
+  --light-clr: #d9e1f9;
+  --dark-clr: #173795;
+  --alert-clr: #bb2649;
+  --process-clr: orange;
+  --validation-clr: limegreen;
+  --md-fweight: 500;
+  --xs-fweight: 300;
+  --xl-fweight: 700;
+  --xxl-fweight: 800;
+  --shadow: 0 5 10 0 rgba(0, 0, 0, 0.3);
 
+  font-family: 'Lato', sans-serif;
+  line-height: 1.5;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
