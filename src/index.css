@@ -23,12 +23,21 @@
 body,
 html, 
 #root {
-  margin: 0;
-  padding: 0;
   height: calc(100vh - 3px);
   height: calc(100svh - 3px);
 }
 
 * {
+  margin: 0;
+  padding: 0;
   box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul,
+li {
+  list-style-type: none;
 }
