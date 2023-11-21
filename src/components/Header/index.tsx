@@ -1,8 +1,11 @@
 import './Header.scss'
+import Logo from './../../assets/images/logo.svg'
 
 function Header() {
   return (
-    <div>Header</div>
+    <header>
+      <img src={Logo} alt="Company's logo" />
+    </header>
   )
 }
 

@@ -20,8 +20,15 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-* {
-  box-sizing: border-box;
+body,
+html, 
+#root {
   margin: 0;
   padding: 0;
+  height: calc(100vh - 3px);
+  height: calc(100svh - 3px);
+}
+
+* {
+  box-sizing: border-box;
 }

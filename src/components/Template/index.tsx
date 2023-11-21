@@ -6,12 +6,12 @@ import './Template.scss'
 
 function Template() {
   return (
-    <>
+    <div className='template__container'>
     <Header />
     <Sidebar />
     <Outlet />
     <Footer />
-    </>
+    </div>
   )
 }
 
