@@ -1,6 +1,6 @@
 :root {
   --primary-clr: #4169e1;
-  --light-clr: #d9e1f9;
+  --light-clr: #FFF;
   --dark-clr: #173795;
   --alert-clr: #bb2649;
   --process-clr: orange;
@@ -37,11 +37,13 @@ html,
 
 h1,
 h2 {
+  font-weight: var(--xl-fweight);
   text-transform: uppercase;
   color: inherit;
 }
 
 a {
+  display: block;
   text-decoration: none;
   color: inherit;
 }

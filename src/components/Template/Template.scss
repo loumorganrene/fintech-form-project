@@ -1,7 +1,7 @@
 .template__container {
     display: grid;
     grid-template-columns: auto;
-    grid-template-rows: [start] 20% [] auto [end] 5%;
+    grid-template-rows: [start] 15% [] auto [end] 5%;
     grid-template-areas:
             "header header header header"
             "sidebar main main main"

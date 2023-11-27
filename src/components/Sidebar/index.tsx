@@ -11,47 +11,37 @@ function Sidebar() {
 
           <li className="progression-bar__item">
             <span className="progression-bar__dot"></span>
-            <span className="progression-bar__label">
-              <a href="#" aria-label="Provide company's details">
-                Company details
-              </a>
-            </span>
+            <a className="progression-bar__label" href="#" aria-label="Provide company's details">
+              Company details
+            </a>
           </li>
 
           <li className="progression-bar__item">
             <span className="progression-bar__dot"></span>
-            <span className="progression-bar__label">
-              <a href="#" aria-label="Present company's sources">
-                Company sources
-              </a>
-            </span>
+            <a className="progression-bar__label" href="#" aria-label="Present company's sources">
+              Company sources
+            </a>
           </li>
 
           <li className="progression-bar__item">
             <span className="progression-bar__dot"></span>
-            <span className="progression-bar__label">
-              <a href="#" aria-label="Register company's representatives">
-                Company representatives
-              </a>
-            </span>
+            <a className="progression-bar__label" href="#" aria-label="Register company's representatives">
+              Company representatives
+            </a>
           </li>
 
           <li className="progression-bar__item">
             <span className="progression-bar__dot"></span>
-            <span className="progression-bar__label">
-              <a href="#" aria-label="Upload mandatory company's documents">
-                Documents
-              </a>
-            </span>
+            <a className="progression-bar__label" href="#" aria-label="Upload mandatory company's documents">
+              Documents
+            </a>
           </li>
 
           <li className="progression-bar__item">
             <span className="progression-bar__dot"></span>
-            <span className="progression-bar__label">
-              <a href="#" aria-label="Submit company's application form for review">
-                Register
-              </a>
-            </span>
+            <a className="progression-bar__label" href="#" aria-label="Submit company's application form for review">
+              Register
+            </a>
           </li>
 
         </ul>
