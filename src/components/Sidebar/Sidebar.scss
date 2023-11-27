@@ -3,8 +3,23 @@ aside {
     grid-area: sidebar;
     grid-row: 2 / span 2;
     background-color: var(--primary-clr);
+    color: var(--light-clr);
+    padding: 6em 0;
+
 
     @media only screen and (min-width: 768px) {
         display: flex;
+        justify-content: center;
+        align-items: start;
+    }
+}
+
+.progression-bar {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    h2 {
+        margin-bottom: 1rem;
     }
 }
