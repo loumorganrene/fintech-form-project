@@ -1,5 +1,10 @@
 aside {
+    display: none;
     grid-area: sidebar;
     grid-row: 2 / span 2;
     background-color: var(--primary-clr);
+
+    @media only screen and (min-width: 768px) {
+        display: flex;
+    }
 }

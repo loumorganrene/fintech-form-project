@@ -27,14 +27,17 @@ html,
   height: calc(100svh - 3px);
 }
 
-* {
+*,
+*::before,
+*::after {
   margin: 0;
-  padding: 0;
+    padding: 0;
   box-sizing: border-box;
 }
 
 a {
   text-decoration: none;
+  color: var(--light-clr);
 }
 
 ul,

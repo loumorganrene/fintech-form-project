@@ -2,7 +2,9 @@ import './Sidebar.scss'
 
 function Sidebar() {
   return (
-    <aside>Sidebar</aside>
+    <aside>
+      
+    </aside>
   )
 }
 

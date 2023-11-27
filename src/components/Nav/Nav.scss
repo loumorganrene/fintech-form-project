@@ -1,5 +1,12 @@
 .header-nav {
+    grid-area: nav;
     display: flex;
-    justify-content: space-around;
-    max-width: 50%;
+    justify-self: end;
+    justify-content: space-between;
+    max-width: 200px;
+    width: 100%;
+
+    i {
+        font-size: 2rem;
+    }
 }

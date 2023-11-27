@@ -4,17 +4,17 @@ function Nav() {
   return (
 <ul className="header-nav">
     <li>
-        <a href="#" aria-label='Go to your account settings'>
+        <a id="user-icon" href="#" aria-label='Go to your account settings'>
             <i className="fa-solid fa-circle-user"></i>
         </a>
     </li>
     <li>
-        <a href="#" aria-label='Ask for assistance'>
+        <a id="help-icon" href="#" aria-label='Ask for assistance'>
             <i className="fa-regular fa-circle-question"></i>
         </a>
     </li>
     <li>
-        <a href="#" aria-label='Log out'>
+        <a id="logout-icon" href="#" aria-label='Log out'>
             <i className="fa-solid fa-power-off"></i>
         </a>
     </li>
