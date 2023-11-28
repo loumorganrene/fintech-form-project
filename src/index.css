@@ -35,8 +35,11 @@ html,
   box-sizing: border-box;
 }
 
+/* FONTS */
+
 h1,
 h2 {
+  font-size: clamp(1rem, 2vw, 1.5rem);
   font-weight: var(--xl-fweight);
   text-transform: uppercase;
   color: inherit;
@@ -44,6 +47,8 @@ h2 {
 
 a {
   display: block;
+  font-size: clamp(1rem, 2vw, 1.5rem);
+  font-weight: var(--xs-fweight);
   text-decoration: none;
   color: inherit;
 }

@@ -16,7 +16,7 @@ function Sidebar() {
             <span className="progression-bar__dot"></span>
             <span className='progression-bar__step'></span>
             <a className="progression-bar__label" href="#" aria-label="Provide company's details">
-              Company details
+              Details
             </a>
           </li>
 
@@ -24,7 +24,7 @@ function Sidebar() {
             <span className="progression-bar__dot"></span>
             <span className='progression-bar__step'></span>
             <a className="progression-bar__label" href="#" aria-label="Present company's sources">
-              Company sources
+              Sources
             </a>
           </li>
 
@@ -32,7 +32,7 @@ function Sidebar() {
             <span className="progression-bar__dot"></span>
             <span className='progression-bar__step'></span>
             <a className="progression-bar__label" href="#" aria-label="Register company's representatives">
-              Company representatives
+              Representatives
             </a>
           </li>
 
