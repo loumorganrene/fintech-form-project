@@ -1,13 +1,22 @@
 .header-nav {
     grid-area: nav;
-    display: flex;
-    justify-self: end;
-    justify-content: space-between;
-    max-width: 200px;
-    width: 100%;
-    color: var(--light-clr);
 
-    i {
-        font-size: 2rem;
+    .header-nav__link {
+        display: none;
+    }
+
+    @media only screen and (min-width: 768px) {
+        .header-nav__link {
+            display: flex;
+            justify-self: end;
+            justify-content: space-between;
+            max-width: 200px;
+            width: 100%;
+            color: var(--light-clr);
+
+            i {
+                font-size: clamp(1.5rem, 3vw, 2rem);
+            }
+        }
     }
 }

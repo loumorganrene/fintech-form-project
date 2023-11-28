@@ -2,8 +2,14 @@ header {
     grid-area: header;
     background-color: var(--primary-clr);
     display: grid;
-    grid-template-areas: "logo nav";
-    grid-template-columns: 2fr 1fr;
+    grid-template-areas: "sidebar logo nav";
+    grid-template-columns: 1fr 1fr 1fr;
+    justify-content: center;
     align-items: center;
-    padding: 0 5em;
+
+    @media only screen and (min-width: 768px) {
+        grid-template-areas: "logo nav";
+        grid-template-columns: 2fr 1fr;
+        padding: 0 5em;
+    }
 }

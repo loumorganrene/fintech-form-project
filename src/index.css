@@ -21,7 +21,7 @@
 }
 
 body,
-html, 
+html,
 #root {
   height: calc(100vh - 3px);
   height: calc(100svh - 3px);
@@ -56,4 +56,14 @@ a {
 ul,
 li {
   list-style-type: none;
+}
+
+picture {
+  max-width: fit-content;
+  height: auto;
+}
+
+img {
+  max-width: 100%;
+  height: auto
 }
