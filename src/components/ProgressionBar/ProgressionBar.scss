@@ -48,17 +48,21 @@
                 display: none;
             }
 
-            &.active {
+            &.active,
+            &.passed {
                 .progression-bar__dot {
                     background-color: var(--primary-clr);
                 }
             }
 
-            &.passed {
-                .progression-bar__dot {
-                    background-color: var(--primary-clr);
+            &.active {
+                .progression-bar__label {
+                    opacity: 1;
+                    font-weight: 800;
                 }
+            }
 
+            &.passed {
                 &:not(:last-child) .progression-bar__step {
                     display: block;
                     position: absolute;
@@ -75,6 +79,8 @@
         }
 
         .progression-bar__label {
+            font-weight: var(--md-fWeight);
+            opacity: .5;
             min-width: fit-content;
         }
     }

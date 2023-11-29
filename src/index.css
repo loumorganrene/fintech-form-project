@@ -46,7 +46,7 @@ h2 {
 }
 
 p {
-    font-size: clamp(.5rem, 2vw, 1rem);
+  font-size: clamp(.5rem, 2vw, 1rem);
 }
 
 a {
@@ -61,6 +61,13 @@ a {
 ul,
 li {
   list-style-type: none;
+}
+
+li:hover,
+li:focus {
+  a {
+    opacity: .75;
+  }
 }
 
 picture {
