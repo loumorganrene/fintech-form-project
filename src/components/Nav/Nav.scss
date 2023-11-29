@@ -1,22 +1,29 @@
 .header-nav {
     grid-area: nav;
+    justify-self: center;
 
     .header-nav__link {
         display: none;
     }
 
     @media only screen and (min-width: 768px) {
+        justify-self: end;
         .header-nav__link {
             display: flex;
-            justify-self: end;
-            justify-content: space-between;
-            max-width: 200px;
-            width: 100%;
-            color: var(--light-clr);
+            gap: 3rem;
+            max-width: 100%;
+        }
 
-            i {
-                font-size: clamp(1.5rem, 3vw, 2rem);
+
+        li:hover,
+        li:focus {
+            i, p {
+                opacity: .75;
             }
+        }
+
+        .user-btn {
+            display: none;
         }
     }
 }

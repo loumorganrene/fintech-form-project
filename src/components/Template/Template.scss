@@ -1,6 +1,6 @@
 .template__container {
     display: grid;
-    grid-template-columns: auto;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-template-rows: [start] 15% [] auto [end] 5%;
     grid-template-areas:
             "header header header header"

@@ -1,15 +1,35 @@
 header {
     grid-area: header;
-    background-color: var(--primary-clr);
     display: grid;
     grid-template-areas: "sidebar logo nav";
     grid-template-columns: 1fr 1fr 1fr;
-    justify-content: center;
     align-items: center;
+    background-color: var(--primary-clr);
+    color: var(--light-clr);
+
+    i {
+        font-size: clamp(1.5rem, 3vw, 2rem);
+    }
+
+    p {
+        font-size: clamp(.62rem, 3vw, 1rem);
+    }
+
+    picture {
+        justify-self: center;
+    }
 
     @media only screen and (min-width: 768px) {
         grid-template-areas: "logo nav";
-        grid-template-columns: 2fr 1fr;
+        grid-template-columns: 1fr 1fr;
         padding: 0 5em;
+
+        picture {
+            justify-self: start;
+        }
+
+        .progression-btn {
+            display: none;
+        }
     }
 }

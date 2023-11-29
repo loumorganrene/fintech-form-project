@@ -6,12 +6,22 @@ import Nav from '../Nav'
 function Header() {
   return (
     <header>
+      <button className='progression-btn'>
+        <i className="fa-solid fa-bars"></i>
+        <p>Progression</p>
+      </button>
       <picture>
-        <source media="(max-width: 768px)" srcSet={LogoSm} />
-        <source media="(min-width: 769px)" srcSet={Logo} />
+        <source
+          media="(max-width: 768px)"
+          srcSet={LogoSm}
+        />
+        <source
+          media="(min-width: 769px)"
+          srcSet={Logo}
+        />
         <img
           className='header-logo'
-          src={Logo} 
+          src={Logo}
           alt="Company's logo"
         />
       </picture>
