@@ -5,10 +5,10 @@ import {
   Routes,
   Route,
 } from "react-router-dom";
-import ErrorPage from './pages/Error/index.tsx';
+import ErrorPage from './pages/Error/index.tsx'
 import './index.css'
-import Form from './components/Form/index.tsx';
-import AuthLayout from './components/AuthLayout/index.tsx';
+import Form from './pages/Form/index.tsx'
+import AuthLayout from './components/AuthLayout/index.tsx'
 
 
 function App() {

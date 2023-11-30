@@ -1,9 +1,10 @@
+import DetailsStep from './DetailsStep'
 import './Form.scss'
 
 function Form() {
   return (
     <main>
-        Form
+        <DetailsStep />
     </main>
   )
 }
