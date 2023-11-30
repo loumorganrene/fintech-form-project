@@ -2,11 +2,11 @@ import { Outlet } from 'react-router-dom'
 import Footer from '../Footer'
 import Header from '../Header'
 import Sidebar from '../Sidebar'
-import './Template.scss'
+import './AuthLayout.scss'
 
-function Template() {
+function AuthLayout() {
   return (
-    <div className='template__container'>
+    <div className='auth-layout__container'>
     <Header />
     <Sidebar />
     <Outlet />
@@ -15,4 +15,4 @@ function Template() {
   )
 }
 
-export default Template
+export default AuthLayout
