@@ -50,6 +50,11 @@ h2 {
   color: inherit;
 }
 
+h3 {
+  font-size: clamp(.875rem, 2vw, 1rem);
+  color: inherit;
+}
+
 p {
   font-size: clamp(.5rem, 2vw, 1rem);
 }

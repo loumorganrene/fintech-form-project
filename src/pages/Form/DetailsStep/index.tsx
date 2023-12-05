@@ -1,7 +1,7 @@
 function DetailsStep() {
     return (
         <>
-            <h1 className="form-step__title">Company details</h1>
+            <h1 className="form-step__title title-underline">Company details</h1>
             <form>
                 {/* PART 1: MAIN DETAILS  */}
                 <fieldset id="main-details">
@@ -17,7 +17,6 @@ function DetailsStep() {
                         />
                     </label>
 
-
                     <label htmlFor="companyRegistrationNumberInput" id="companyRegistrationNumberLabel">
                         <h3 className="label-heading">Registration Number</h3>
                         <input
@@ -28,17 +27,23 @@ function DetailsStep() {
                         />
                     </label>
 
-                    <label htmlFor="companyTypeInput" id="companyTypeLabel">
+                    <label htmlFor="companyTypeList" id="companyTypeLabel">
                         <h3 className="label-heading">Type of Company</h3>
-                        <input
-                            type="text"
-                            id="companyTypeInput"
-                            name="companyType"
-                            aria-label="Enter company's type"
-                        />
                         {/* TODO : Collabsible dropdown menu with searchbar component */}
+                        <select
+                            id="companyTypeList"
+                            name="companyTypeList"
+                            aria-label="Choose company's type"
+                        >
+                            <option value="">-- Choose a type --</option>
+                            <option value="dog">Dog</option>
+                            <option value="cat">Cat</option>
+                            <option value="hamster">Hamster</option>
+                            <option value="parrot">Parrot</option>
+                            <option value="spider">Spider</option>
+                            <option value="goldfish">Goldfish</option>
+                        </select>
                     </label>
-
 
                     <label htmlFor="companyTradingNameInput" id="companyTradingNameLabel">
                         <h3 className="label-heading">
@@ -56,7 +61,6 @@ function DetailsStep() {
                         />
                     </label>
 
-
                     <label htmlFor="companyIncorporationDateInput" id="companyIncorporationDateLabel">
                         <h3 className="label-heading">Date of Incorporation</h3>
                         <input
@@ -66,30 +70,16 @@ function DetailsStep() {
                         />
                     </label>
 
-
-                    <label htmlFor="companyIncorporationCountryInput" id="companyIncorporationCountryLabel">
+                    <label htmlFor="companyIncorporationCountryList" id="companyIncorporationCountryLabel">
                         <h3 className="label-heading">Country of Incorporation</h3>
-                        <input
-                            type="text"
-                            id="companyIncorporationCountryInput"
-                            name="companyIncorporationCountry"
-                            aria-label="Enter company's country of incorporation"
-                        />
                         {/* TODO : Collabsible dropdown menu with searchbar component */}
-                    </label>
-
-
-                    <label htmlFor="companyNumberEmployeesList" id="companyNumberEmployeesLabel">
-                        <h3 className="label-heading">Number of Employees</h3>
-                        {/* <input
-                            type="text"
-                            id="companyNumberEmployeesInput"
-                            name="companyNumberEmployees"
-                            aria-label="Enter company's number of employees"
-                        /> */}
-                        <select id="companyNumberEmployeesList" name="companyNumberEmployeesList">
-                            <option value="">--Please choose an option--</option>
-                            <option value="one">Dog</option>
+                        <select
+                            id="companyIncorporationCountryList"
+                            name="companyIncorporationCountryList"
+                            aria-label="Choose company's country of incorporation"
+                        >
+                            <option value="">-- Choose a country --</option>
+                            <option value="dog">Dog</option>
                             <option value="cat">Cat</option>
                             <option value="hamster">Hamster</option>
                             <option value="parrot">Parrot</option>
@@ -98,6 +88,22 @@ function DetailsStep() {
                         </select>
                     </label>
 
+                    <label htmlFor="companyNumberEmployeesList" id="companyNumberEmployeesLabel">
+                        <h3 className="label-heading">Number of Employees</h3>
+                        <select
+                            id="companyNumberEmployeesList"
+                            name="companyNumberEmployeesList"
+                            aria-label="Choose company's number of employees"
+                        >
+                            <option value="">-- Choose a number of employees --</option>
+                            <option value="one">Dog</option>
+                            <option value="cat">Cat</option>
+                            <option value="hamster">Hamster</option>
+                            <option value="parrot">Parrot</option>
+                            <option value="spider">Spider</option>
+                            <option value="goldfish">Goldfish</option>
+                        </select>
+                    </label>
 
                     <label htmlFor="companyVATInput" id="companyVATLabel">
                         <h3 className="label-heading">VAT Number</h3>
@@ -109,7 +115,6 @@ function DetailsStep() {
                         />
                     </label>
 
-
                     <label htmlFor="companyTINNumberInput" id="companyTINNumberLabel">
                         <h3 className="label-heading">Tax Identification Number (TIN)</h3>
                         <input
@@ -119,7 +124,6 @@ function DetailsStep() {
                             aria-label="Enter company's tax identification number"
                         />
                     </label>
-
 
                     <label htmlFor="companyTINJurisdictionInput" id="companyTINJurisdictionLabel">
                         <h3 className="label-heading">TIN Jurisdiction</h3>
@@ -131,17 +135,15 @@ function DetailsStep() {
                         />
                     </label>
 
-
                     <label htmlFor="companyIndustryTypeList" id="companyIndustryTypeLabel">
                         <h3 className="label-heading">Industry Type</h3>
-                        {/* <input
-                            type="text"
-                            id="companyIndustryTypeInput"
-                            name="companyIndustryType"
-                            aria-label="Enter company's type of industry"
-                        /> */}
-                        <select id="companyIndustryTypeList" name="companyIndustryTypeList">
-                            <option value="">--Please choose an option--</option>
+                        {/* TODO : Collabsible dropdown menu with searchbar component */}
+                        <select
+                            id="companyIndustryTypeList"
+                            name="companyIndustryTypeList"
+                            aria-label="Choose an industry type"
+                        >
+                            <option value="">-- Choose an industry type --</option>
                             <option value="one">Dog</option>
                             <option value="cat">Cat</option>
                             <option value="hamster">Hamster</option>
@@ -166,7 +168,6 @@ function DetailsStep() {
                         </label>
                     </div>
 
-
                     <label htmlFor="companyShareCapitalInput" id="companyShareCapitalLabel">
                         <h3 className="label-heading">Share Capital (EUR)</h3>
                         <input
@@ -176,7 +177,6 @@ function DetailsStep() {
                             aria-label="Enter company's share capital in euro"
                         />
                     </label>
-
 
                     <label htmlFor="companyPrevYearTurnoverInput" id="companyPrevYearTurnoverLabel">
                         <h3 className="label-heading">Previous year Turnover (EUR)</h3>
@@ -188,7 +188,6 @@ function DetailsStep() {
                         />
                     </label>
 
-
                     <label htmlFor="companyEmailInput" id="companyEmailLabel">
                         <h3 className="label-heading">Email address</h3>
                         <input
@@ -199,7 +198,6 @@ function DetailsStep() {
                         />
                     </label>
 
-
                     <label htmlFor="companyWebsiteInput" id="companyWebsiteLabel">
                         <h3 className="label-heading">Website - URL</h3>
                         <input
@@ -209,7 +207,6 @@ function DetailsStep() {
                             aria-label="Enter company's website adress"
                         />
                     </label>
-
 
                     <label htmlFor="companyWebsiteAddInput" id="companyWebsiteAddLabel">
                         <h3 className="label-heading">Additional website</h3>
@@ -326,8 +323,12 @@ function DetailsStep() {
                         </span>
 
                         <div className="conditional-input">
-                            <select name="companyFiduciarySharesList">
-                                <option value="">--Please choose an option--</option>
+                            <select
+                                id="companyFiduciarySharesList"
+                                name="companyFiduciarySharesList"
+                                aria-label="Choose company's fiduciary"
+                            >
+                                <option value="">-- Choose a fiduciary --</option>
                                 <option value="dog">Dog</option>
                                 <option value="cat">Cat</option>
                                 <option value="hamster">Hamster</option>
@@ -350,8 +351,9 @@ function DetailsStep() {
                     </label>
 
                     <label id="companyInssuanceBearerShares">
-                        <h3 className="label-heading">Do Entity's constituting documents
-                            <br /> (eg. M&As) allow for inssuance of bearer shares ?</h3>
+                        <h3 className="label-heading">
+                            Do Entity's constituting documents (eg. M&As) allow for inssuance of bearer shares ?
+                        </h3>
                         <span className="choice__container">
                             <label htmlFor="companyInssuanceBearerSharesYes">Yes</label>
                             <input
@@ -374,10 +376,10 @@ function DetailsStep() {
 
                     </label>
 
-                    <label id="companyLicense">
-                        <h3 className="label-heading">Is Company Licensed ?</h3>
+                    <label id="companyLicence">
+                        <h3 className="label-heading">Is Company Licenced ?</h3>
                         <span className="choice__container">
-                            <label htmlFor="companyLicenseYes">Yes</label>
+                            <label htmlFor="companyLicenceYes">Yes</label>
                             <input
                                 type="radio"
                                 id="companyLicenseYes"
@@ -387,8 +389,12 @@ function DetailsStep() {
                         </span>
 
                         <div className="conditional-input">
-                            <select name="licenseList">
-                                <option value="">--Please choose an option--</option>
+                            <select
+                                id="companyLicenceList"
+                                name="companyLicenceList"
+                                aria-label="Choose company's licence"
+                            >
+                                <option value="">-- Choose a licence --</option>
                                 <option value="dog">Dog</option>
                                 <option value="cat">Cat</option>
                                 <option value="hamster">Hamster</option>
@@ -412,7 +418,9 @@ function DetailsStep() {
 
                 {/* PART 3: MAIN CONTACT DETAILS  */}
                 <fieldset id="main-contact">
-                    <legend className="sr-only">Main contact details</legend>
+                    <legend className="title-underline">
+                        Main contact (person in charge of company's application) details
+                    </legend>
 
                     <label htmlFor="companyMainContactNameInput" id="companyMainContactNameLabel">
                         <h3 className="label-heading">Full Name</h3>
@@ -423,7 +431,6 @@ function DetailsStep() {
                             aria-label="Enter company's main contact fullname"
                         />
                     </label>
-
 
                     <label htmlFor="companyMainContactEmailInput" id="companyMainContactEmailLabel">
                         <h3 className="label-heading">Email address</h3>
