@@ -42,8 +42,12 @@ function DetailsStep() {
 
                     <label htmlFor="companyTradingNameInput" id="companyTradingNameLabel">
                         <h3 className="label-heading">
-                            Company trading as <br/>(if different from company name)
-                            </h3>
+                            Company trading as
+                            <br />
+                            <span className="label-subheading">
+                                (if different from company name)
+                            </span>
+                        </h3>
                         <input
                             type="text"
                             id="companyTradingNameInput"
@@ -149,7 +153,10 @@ function DetailsStep() {
 
                     <div className="conditional-input">
                         <label htmlFor="companyIndustryDescInput" id="companyIndustryDescLabel">
-                            <h3 className="label-heading">Description <br /> (only if industry is other)</h3>
+                            <h3 className="label-heading">Description
+                                <br />
+                                <span className="label-subheading">(only if industry is other)</span>
+                            </h3>
                             <input
                                 type="text"
                                 id="companyIndustryDescInput"
@@ -220,24 +227,40 @@ function DetailsStep() {
                 <fieldset id="additional-details">
                     <legend className="sr-only">Additionnal details</legend>
 
-                    <label id="companyGroup">
-                        Is company part of a Group ? (If "yes", please provide Group Corporate Structure)
-                        <input
-                            type="radio"
-                            id="companyGroupYes"
-                            name="choice"
-                            value="yes"
-                        />
-                        Yes
-                        <input
-                            type="radio"
-                            id="companyGroupNo"
-                            name="choice"
-                            value="no"
-                        />
-                        No
+                    <label id="companyGroup" className="labels__container">
+                        <h3 className="label-heading">
+                            Is company part of a Group ?
+                            <br />
+                            <span className="label-subheading">
+                                (If "yes", please provide Group Corporate Structure)
+                            </span>
+                        </h3>
+                        <span className="choice__container">
+                            <label htmlFor="companyGroupYes">Yes</label>
+                            <input
+                                type="radio"
+                                id="companyGroupYes"
+                                name="choice"
+                                value="yes"
+                            />
+                        </span>
+
+                        <span className="choice__container">
+                            <label htmlFor="companyGroupNo">No</label>
+                            <input
+                                type="radio"
+                                id="companyGroupNo"
+                                name="choice"
+                                value="no"
+                            />
+                        </span>
+
                         <div className="conditional-input">
-                            <label htmlFor="companyGroupParentHoldingCheckbox" id="companyGroupParentHoldingLabel">
+                            <label
+                                htmlFor="companyGroupParentHoldingCheckbox"
+                                id="companyGroupParentHoldingLabel"
+                                className="choice__container"
+                            >
                                 Parent/Holding
                                 <input
                                     type="checkbox"
@@ -246,7 +269,11 @@ function DetailsStep() {
                                 />
                             </label>
 
-                            <label htmlFor="companyGroupSubsidiaryCheckbox" id="companyGroupSubsidiaryLabel">
+                            <label
+                                htmlFor="companyGroupSubsidiaryCheckbox"
+                                id="companyGroupSubsidiaryLabel"
+                                className="choice__container"
+                            >
                                 Subsidiary
                                 <input
                                     type="checkbox"
@@ -255,7 +282,11 @@ function DetailsStep() {
                                 />
                             </label>
 
-                            <label htmlFor="companyGroupAssociateCheckbox" id="companyGroupAssociateLabel">
+                            <label
+                                htmlFor="companyGroupAssociateCheckbox"
+                                id="companyGroupAssociateLabel"
+                                className="choice__container"
+                            >
                                 Associate
                                 <input
                                     type="checkbox"
@@ -264,7 +295,10 @@ function DetailsStep() {
                                 />
                             </label>
 
-                            <label htmlFor="companyGroupOtherRoleInput" id="companyGroupOtherRoleLabel">
+                            <label
+                                htmlFor="companyGroupOtherRoleInput"
+                                id="companyGroupOtherRoleLabel"
+                            >
                                 Other
                                 <input
                                     type="text"
@@ -278,15 +312,19 @@ function DetailsStep() {
                     </label>
 
                     <label id="companyFiduciaryShares">
-                        Are any of Company's shares held under fiduciary capacity ?
-                        <input
-                            type="radio"
-                            id="companyFiduciarySharesYes"
-                            name="choice"
-                            value="yes"
-                        />
-                        Yes
-                        
+                        <h3 className="label-heading">
+                            Are any of Company's shares held under fiduciary capacity ?
+                        </h3>
+                        <span className="choice__container">
+                            <label htmlFor="companyFiduciarySharesYes">Yes</label>
+                            <input
+                                type="radio"
+                                id="companyFiduciarySharesYes"
+                                name="choice"
+                                value="yes"
+                            />
+                        </span>
+
                         <div className="conditional-input">
                             <select name="companyFiduciarySharesList">
                                 <option value="">--Please choose an option--</option>
@@ -299,45 +337,54 @@ function DetailsStep() {
                             </select>
                         </div>
 
-                        <input
-                            type="radio"
-                            id="companyFiduciarySharesNo"
-                            name="choice"
-                            value="no"
-                        />
-                        No
+                        <span className="choice__container">
+                            <label htmlFor="companyFiduciarySharesNo">No</label>
+                            <input
+                                type="radio"
+                                id="companyFiduciarySharesNo"
+                                name="choice"
+                                value="no"
+                            />
+                        </span>
 
                     </label>
 
                     <label id="companyInssuanceBearerShares">
-                        Do Entity's constituting documents (eg. M&As) allow for inssuance of bearer shares ?
-                        <input
-                            type="radio"
-                            id="companyInssuanceBearerSharesYes"
-                            name="choice"
-                            value="yes"
-                        />
-                        Yes
+                        <h3 className="label-heading">Do Entity's constituting documents
+                            <br /> (eg. M&As) allow for inssuance of bearer shares ?</h3>
+                        <span className="choice__container">
+                            <label htmlFor="companyInssuanceBearerSharesYes">Yes</label>
+                            <input
+                                type="radio"
+                                id="companyInssuanceBearerSharesYes"
+                                name="choice"
+                                value="yes"
+                            />
+                        </span>
 
-                        <input
-                            type="radio"
-                            id="companyInssuanceBearerSharesNo"
-                            name="choice"
-                            value="no"
-                        />
-                        No
+                        <span className="choice__container">
+                            <label htmlFor="companyInssuanceBearerSharesNo">No</label>
+                            <input
+                                type="radio"
+                                id="companyInssuanceBearerSharesNo"
+                                name="choice"
+                                value="no"
+                            />
+                        </span>
 
                     </label>
 
                     <label id="companyLicense">
-                        Is Company Licensed ?
-                        <input
-                            type="radio"
-                            id="companyLicenseYes"
-                            name="choice"
-                            value="yes"
-                        />
-                        Yes
+                        <h3 className="label-heading">Is Company Licensed ?</h3>
+                        <span className="choice__container">
+                            <label htmlFor="companyLicenseYes">Yes</label>
+                            <input
+                                type="radio"
+                                id="companyLicenseYes"
+                                name="choice"
+                                value="yes"
+                            />
+                        </span>
 
                         <div className="conditional-input">
                             <select name="licenseList">
@@ -351,13 +398,15 @@ function DetailsStep() {
                             </select>
                         </div>
 
-                        <input
-                            type="radio"
-                            id="companyLicenseNo"
-                            name="choice"
-                            value="no"
-                        />
-                        No
+                        <span className="choice__container">
+                            <label htmlFor="companyLicenseNo">No</label>
+                            <input
+                                type="radio"
+                                id="companyLicenseNo"
+                                name="choice"
+                                value="no"
+                            />
+                        </span>
                     </label>
                 </fieldset>
 
