@@ -93,9 +93,9 @@ function DetailsStep() {
                         <select
                             id="companyNumberEmployeesList"
                             name="companyNumberEmployeesList"
-                            aria-label="Choose company's number of employees"
+                            aria-label="Choose company's range of employees number"
                         >
-                            <option value="">-- Choose a number of employees --</option>
+                            <option value="">-- Choose a range --</option>
                             <option value="one">Dog</option>
                             <option value="cat">Cat</option>
                             <option value="hamster">Hamster</option>
@@ -442,6 +442,8 @@ function DetailsStep() {
                         />
                     </label>
                 </fieldset>
+                {/* TODO: formNavigation component with submitting of the page on next button */}
+                
             </form>
         </>
     )

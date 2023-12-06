@@ -50,7 +50,8 @@ h2 {
   color: inherit;
 }
 
-h3 {
+h3,
+button {
   font-size: clamp(.875rem, 2vw, 1rem);
   color: inherit;
 }
@@ -93,6 +94,7 @@ img {
 button {
   display: inline-block;
   text-decoration: none;
+  font-family: inherit;
   color: inherit;
   background-color: transparent;
   border: 0;
@@ -101,12 +103,6 @@ button {
 
 button:hover,
 button:focus {
-  color: var(--dark-clr);
-  opacity: .75;
-}
-
-.btn:hover,
-.btn:focus {
   opacity: .75;
 }
 
@@ -121,4 +117,3 @@ button:focus {
   clip: rect(0, 0, 0, 0);
   border: 0;
 }
-

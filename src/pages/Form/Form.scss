@@ -1,4 +1,7 @@
  main {
+     display: flex;
+     flex-direction: column;
+     gap: 3em;
      margin: 0 auto;
 
      h1 {
@@ -8,12 +11,46 @@
          margin-block: 1em 3em;
          margin-inline-start: .5em;
      }
+
+     .form-nav__container {
+         display: flex;
+         justify-content: flex-end;
+         padding: 0 2.5em;
+         gap: 2em;
+     }
+
+     .btn-form-page {
+         width: 150px;
+         padding: .5em 0;
+         text-transform: capitalize;
+         text-align: center;
+         font-weight: var(--xl-fweight);
+         border-radius: 50px;
+         border: 5px solid var(--primary-clr);
+     }
+
+     .next,
+     .submit {
+         color: var(--light-clr);
+         background-color: var(--primary-clr);
+     }
+
+     .previous {
+         color: var(--primary-clr);
+         background-color: transparent;
+
+         &:hover,
+         &:focus {
+             color: var(--light-clr);
+             background-color: var(--primary-clr);
+         }
+     }
  }
 
  form {
      display: flex;
      flex-direction: column;
-     padding: 0 2em;
+     padding: 0 2.5em;
      gap: 2rem;
 
      fieldset {
@@ -51,6 +88,7 @@
          }
 
          select {
+             text-align: center;
              border-radius: 10px;
              border: 3px solid var(--dark-clr);
              background: var(--light-clr);
@@ -83,7 +121,6 @@
              color: var(--dark-clr);
              font-size: .75rem;
          }
-
      }
 
  }
