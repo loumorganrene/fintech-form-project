@@ -1,3 +1,5 @@
+import InputForm from "../../../components/InputForm"
+
 function DetailsStep() {
     return (
         <>
@@ -7,25 +9,19 @@ function DetailsStep() {
                 <fieldset id="main-details">
                     <legend className="sr-only">Main details</legend>
 
-                    <label htmlFor="companyNameInput" id="companyNameLabel">
-                        <h3 className="label-heading">Company Name</h3>
-                        <input
-                            type="text"
-                            id="companyNameInput"
-                            name="companyName"
-                            aria-label="Enter company's name"
-                        />
-                    </label>
+                    <InputForm
+                        name="companyName"
+                        type="text"
+                        title="Company Name"
+                        accessibility="Enter company's name"
+                    />
 
-                    <label htmlFor="companyRegistrationNumberInput" id="companyRegistrationNumberLabel">
-                        <h3 className="label-heading">Registration Number</h3>
-                        <input
-                            type="text"
-                            id="companyRegistrationNumberInput"
-                            name="companyRegistrationNumber"
-                            aria-label="Enter company's registration number"
-                        />
-                    </label>
+                    <InputForm
+                        name="companyRegistration"
+                        type="text"
+                        title="Registration Number"
+                        accessibility="Enter company's registration number"
+                    />
 
                     <label htmlFor="companyTypeList" id="companyTypeLabel">
                         <h3 className="label-heading">Type of Company</h3>
@@ -443,7 +439,7 @@ function DetailsStep() {
                     </label>
                 </fieldset>
                 {/* TODO: formNavigation component with submitting of the page on next button */}
-                
+
             </form>
         </>
     )
