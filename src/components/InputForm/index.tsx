@@ -13,11 +13,12 @@ import PropTypes from 'prop-types'
  * @param {string[]} [props.checkboxChoices] - Array of choices for checkbox inputs.
  * @param {string} [props.placeholder] - Placeholder text for the input field.
  * @param {string} [props.className] - Custom class for the input container.
+ * @property {ChangeEventHandler} [props.onChange] - Event handler for change events on checked input.
  * @param {ReactNode} [props.children] - Additional children to be rendered.
  * @returns {JSX.Element} JSX Element representing the input form.
  */
 
-function InputForm({ name, type, title, noHeader, accessibility, placeholder, radioChoices, checkboxChoices, className, children }: InputPropType) {
+function InputForm({ name, type, title, noHeader, accessibility, radioChoices, checkboxChoices, placeholder, className, onChange, children }: InputPropType) {
     const isRadio = type === "radio"
     const isCheckbox = type === "checkbox"
     const isSimple = noHeader === true
@@ -31,12 +32,14 @@ function InputForm({ name, type, title, noHeader, accessibility, placeholder, ra
                     (<>
                         {checkboxChoices?.map((choice) =>
                             <label
+                                key={choice + type}
                                 htmlFor={name + "Checkbox"}
                                 id={name + "Label"}
                                 className="choice__container"
                             >
                                 {choice}
                                 <input
+                                    key={name + type}
                                     type={type}
                                     id={name + "Checkbox"}
                                     name={name}
@@ -68,13 +71,14 @@ function InputForm({ name, type, title, noHeader, accessibility, placeholder, ra
                         {isSimple ? title : <h3 className="label-heading">{title}</h3>}
                         {radioChoices?.map(
                             (choice) =>
-                                <span className="choice__container">
+                                <span key={choice + type} className="choice__container">
                                     <label htmlFor={name + choice}>{choice}</label>
                                     <input
                                         type={type}
                                         id={name + choice}
                                         name={name + "Choice"}
                                         value={choice}
+                                        onChange={onChange}
                                     />
                                 </span>
                         )}
@@ -95,6 +99,7 @@ InputForm.propTypes = {
     checkboxChoices: PropTypes.arrayOf(PropTypes.string),
     placeholder: PropTypes.string,
     className: PropTypes.string,
+    onChange: PropTypes.func,
     children: PropTypes.node,
 }
 
