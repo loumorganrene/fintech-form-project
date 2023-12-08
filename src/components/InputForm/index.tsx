@@ -1,6 +1,5 @@
 import './InputForm.scss'
 import PropTypes from 'prop-types'
-import { InputPropType } from './InputForm'
 
 /**
  * InputForm Component - Renders different input elements based on the provided type.

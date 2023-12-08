@@ -275,30 +275,30 @@ function DetailsStep() {
                         </div>
                     </InputForm>
 
-            </fieldset>
+                </fieldset>
 
-            {/* PART 3: MAIN CONTACT DETAILS  */}
-            <fieldset id="main-contact">
-                <legend className="title-underline">
-                    Main contact (person in charge of company's application) details
-                </legend>
+                {/* PART 3: MAIN CONTACT DETAILS  */}
+                <fieldset id="main-contact">
+                    <legend className="title-underline">
+                        Main contact (person in charge of company's application) details
+                    </legend>
 
-                <InputForm
-                    name="companyMainContactName"
-                    type="text"
-                    title={"Full Name"}
-                    accessibility="Enter company's main contact fullname"
-                />
+                    <InputForm
+                        name="companyMainContactName"
+                        type="text"
+                        title={"Full Name"}
+                        accessibility="Enter company's main contact fullname"
+                    />
 
-                <InputForm
-                    name="companyMainContactEmail"
-                    type="email"
-                    title={"Email address"}
-                    accessibility="Enter company's main contact email address"
-                />
+                    <InputForm
+                        name="companyMainContactEmail"
+                        type="email"
+                        title={"Email address"}
+                        accessibility="Enter company's main contact email address"
+                    />
 
-            </fieldset>
-        </form >
+                </fieldset>
+            </form >
         </>
     )
 }

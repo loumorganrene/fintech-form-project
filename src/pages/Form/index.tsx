@@ -7,10 +7,6 @@ import Register from './SubmitStep'
 import { useState } from 'react'
 import './Form.scss'
 
-// interface FormChildren {
-//   children: FunctionComponent,
-// }
-
 function Form() {
   const conditionalStepComponent = () => {
     switch (formPageIndex) {
