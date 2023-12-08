@@ -2,10 +2,6 @@ import InputForm from "../../../components/InputForm"
 import { ChangeEvent, useState } from "react";
 
 function DetailsStep() {
-    // const [isGroup, setIsGroup] = useState("No")
-    // const [isFiduciary, setIsFiduciary] = useState("No")
-    // const [isBearerShares, setIsBearerShares] = useState("No")
-    // const [isLicence, setIsLicence] = useState("No")
 
     const [showGroupInput, setShowGroupInput] = useState(false)
     const [showFiduciaryInput, setShowFiduciaryInput] = useState(false)
