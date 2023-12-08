@@ -41,30 +41,23 @@ function DetailsStep() {
                         </select>
                     </label>
 
-                    <label htmlFor="companyTradingNameInput" id="companyTradingNameLabel">
-                        <h3 className="label-heading">
-                            Company trading as
+                    <InputForm
+                        name="companyTradingName"
+                        type="text"
+                        title={<>Company trading as
                             <br />
                             <span className="label-subheading">
                                 (if different from company name)
-                            </span>
-                        </h3>
-                        <input
-                            type="text"
-                            id="companyTradingNameInput"
-                            name="companyTradingName"
-                            aria-label="Enter company's trading name"
-                        />
-                    </label>
+                            </span></>}
+                        accessibility="Enter company's trading name"
+                    />
 
-                    <label htmlFor="companyIncorporationDateInput" id="companyIncorporationDateLabel">
-                        <h3 className="label-heading">Date of Incorporation</h3>
-                        <input
-                            type="date"
-                            id="companyIncorporationDateInput"
-                            name="companyIncorporationDate"
-                        />
-                    </label>
+                    <InputForm
+                        name="companyIncorporationDate"
+                        type="date"
+                        title={"Date of Incorporation"}
+                        accessibility="Enter company's incorporation's date"
+                    />
 
                     <label htmlFor="companyIncorporationCountryList" id="companyIncorporationCountryLabel">
                         <h3 className="label-heading">Country of Incorporation</h3>
@@ -101,35 +94,26 @@ function DetailsStep() {
                         </select>
                     </label>
 
-                    <label htmlFor="companyVATInput" id="companyVATLabel">
-                        <h3 className="label-heading">VAT Number</h3>
-                        <input
-                            type="text"
-                            id="companyVATInput"
-                            name="companyVAT"
-                            aria-label="Enter company's VAT number"
-                        />
-                    </label>
+                    <InputForm
+                        name="companyVAT"
+                        type="text"
+                        title={"VAT Number"}
+                        accessibility="Enter company's VAT number"
+                    />
 
-                    <label htmlFor="companyTINNumberInput" id="companyTINNumberLabel">
-                        <h3 className="label-heading">Tax Identification Number (TIN)</h3>
-                        <input
-                            type="text"
-                            id="companyTINNumberInput"
-                            name="companyTINNumber"
-                            aria-label="Enter company's tax identification number"
-                        />
-                    </label>
+                    <InputForm
+                        name="companyTINNumber"
+                        type="text"
+                        title={"Tax Identification Number (TIN)"}
+                        accessibility="Enter company's tax identification number"
+                    />
 
-                    <label htmlFor="companyTINJurisdictionInput" id="companyTINJurisdictionLabel">
-                        <h3 className="label-heading">TIN Jurisdiction</h3>
-                        <input
-                            type="text"
-                            id="companyTINJurisdictionInput"
-                            name="companyTINJurisdiction"
-                            aria-label="Enter company's TIN jurisdiction"
-                        />
-                    </label>
+                    <InputForm
+                        name="companyTINJurisdiction"
+                        type="text"
+                        title={"TIN Jurisdiction"}
+                        accessibility="Enter company's TIN jurisdiction"
+                    />
 
                     <label htmlFor="companyIndustryTypeList" id="companyIndustryTypeLabel">
                         <h3 className="label-heading">Industry Type</h3>
@@ -150,69 +134,52 @@ function DetailsStep() {
                     </label>
 
                     <div className="conditional-input">
-                        <label htmlFor="companyIndustryDescInput" id="companyIndustryDescLabel">
-                            <h3 className="label-heading">Description
+                        <InputForm
+                            name="companyIndustryDesc"
+                            type="text"
+                            title={<>
+                                Description
                                 <br />
                                 <span className="label-subheading">(only if industry is other)</span>
-                            </h3>
-                            <input
-                                type="text"
-                                id="companyIndustryDescInput"
-                                name="companyIndustryDesc"
-                                aria-label="Describe company's industry type"
-                            />
-                        </label>
+                            </>}
+                            accessibility="Describe company's industry type"
+                        />
                     </div>
 
-                    <label htmlFor="companyShareCapitalInput" id="companyShareCapitalLabel">
-                        <h3 className="label-heading">Share Capital (EUR)</h3>
-                        <input
-                            type="text"
-                            id="companyShareCapitalInput"
-                            name="companyShareCapital"
-                            aria-label="Enter company's share capital in euro"
-                        />
-                    </label>
+                    <InputForm
+                        name="companyShareCapital"
+                        type="text"
+                        title={"Share Capital (EUR)"}
+                        accessibility="Enter company's share capital in euro"
+                    />
 
-                    <label htmlFor="companyPrevYearTurnoverInput" id="companyPrevYearTurnoverLabel">
-                        <h3 className="label-heading">Previous year Turnover (EUR)</h3>
-                        <input
-                            type="text"
-                            id="companyPrevYearTurnoverInput"
-                            name="companyPrevYearTurnover"
-                            aria-label="Enter previous year turnover number in euro"
-                        />
-                    </label>
+                    <InputForm
+                        name="companyPrevYearTurnover"
+                        type="text"
+                        title={"Previous year Turnover (EUR)"}
+                        accessibility="Enter previous year turnover number in euro"
+                    />
 
-                    <label htmlFor="companyEmailInput" id="companyEmailLabel">
-                        <h3 className="label-heading">Email address</h3>
-                        <input
-                            type="email"
-                            id="companyEmailInput"
-                            name="companyEmail"
-                            aria-label="Enter company's email address"
-                        />
-                    </label>
+                    <InputForm
+                        name="companyEmail"
+                        type="email"
+                        title={"Email address"}
+                        accessibility="Enter company's email address"
+                    />
 
-                    <label htmlFor="companyWebsiteInput" id="companyWebsiteLabel">
-                        <h3 className="label-heading">Website - URL</h3>
-                        <input
-                            type="text"
-                            id="companyWebsiteInput"
-                            name="companyWebsite"
-                            aria-label="Enter company's website adress"
-                        />
-                    </label>
+                    <InputForm
+                        name="companyWebsite"
+                        type="text"
+                        title={"Website - URL"}
+                        accessibility="Enter company's website adress"
+                    />
 
-                    <label htmlFor="companyWebsiteAddInput" id="companyWebsiteAddLabel">
-                        <h3 className="label-heading">Additional website</h3>
-                        <input
-                            type="text"
-                            id="companyWebsiteAddInput"
-                            name="companyWebsiteAdd"
-                            aria-label="Enter additional website address"
-                        />
-                    </label>
+                    <InputForm
+                        name="companyWebsiteAdd"
+                        type="text"
+                        title={"Additional website - URL"}
+                        accessibility="Enter additional website address"
+                    />
 
                 </fieldset>
 
@@ -220,103 +187,45 @@ function DetailsStep() {
                 <fieldset id="additional-details">
                     <legend className="sr-only">Additionnal details</legend>
 
-                    <label id="companyGroup" className="labels__container">
-                        <h3 className="label-heading">
+                    <InputForm
+                        name="companyGroup"
+                        type="radio"
+                        title={<>
                             Is company part of a Group ?
                             <br />
                             <span className="label-subheading">
                                 (If "yes", please provide Group Corporate Structure)
                             </span>
-                        </h3>
-                        <span className="choice__container">
-                            <label htmlFor="companyGroupYes">Yes</label>
-                            <input
-                                type="radio"
-                                id="companyGroupYes"
-                                name="choice"
-                                value="yes"
-                            />
-                        </span>
-
-                        <span className="choice__container">
-                            <label htmlFor="companyGroupNo">No</label>
-                            <input
-                                type="radio"
-                                id="companyGroupNo"
-                                name="choice"
-                                value="no"
-                            />
-                        </span>
-
+                        </>}
+                        radioChoices={["Yes", "No"]}
+                    >
                         <div className="conditional-input">
-                            <label
-                                htmlFor="companyGroupParentHoldingCheckbox"
-                                id="companyGroupParentHoldingLabel"
-                                className="choice__container"
-                            >
-                                Parent/Holding
-                                <input
-                                    type="checkbox"
-                                    id="companyGroupParentHoldingCheckbox"
-                                    name="companyGroupParentHolding"
-                                />
-                            </label>
-
-                            <label
-                                htmlFor="companyGroupSubsidiaryCheckbox"
-                                id="companyGroupSubsidiaryLabel"
-                                className="choice__container"
-                            >
-                                Subsidiary
-                                <input
-                                    type="checkbox"
-                                    id="companyGroupSubsidiaryCheckbox"
-                                    name="companyGroupSubsidiary"
-                                />
-                            </label>
-
-                            <label
-                                htmlFor="companyGroupAssociateCheckbox"
-                                id="companyGroupAssociateLabel"
-                                className="choice__container"
-                            >
-                                Associate
-                                <input
-                                    type="checkbox"
-                                    id="companyGroupAssociateCheckbox"
-                                    name="companyGroupAssociate"
-                                />
-                            </label>
-
-                            <label
-                                htmlFor="companyGroupOtherRoleInput"
-                                id="companyGroupOtherRoleLabel"
-                            >
-                                Other
-                                <input
-                                    type="text"
-                                    id="companyGroupOtherRoleInput"
-                                    name="companyGroupOtherRole"
-                                    aria-label="Describe your role in group"
-                                />
-                            </label>
-
-                        </div>
-                    </label>
-
-                    <label id="companyFiduciaryShares">
-                        <h3 className="label-heading">
-                            Are any of Company's shares held under fiduciary capacity ?
-                        </h3>
-                        <span className="choice__container">
-                            <label htmlFor="companyFiduciarySharesYes">Yes</label>
-                            <input
-                                type="radio"
-                                id="companyFiduciarySharesYes"
-                                name="choice"
-                                value="yes"
+                            <InputForm
+                                name="companyGroupRole"
+                                type="checkbox"
+                                checkboxChoices={[
+                                    "Parent/Holding",
+                                    "Subsidiary",
+                                    "Associate"
+                                ]}
                             />
-                        </span>
+
+                            <InputForm
+                                name="companyGroupOtherRole"
+                                type="text"
+                                title="Other"
+                                noHeader
+                                accessibility="Describe your role in group"
+                            />
+                        </div>
+                    </InputForm>
+
+                    <InputForm
+                        name="companyFiduciaryShares"
+                        type="radio"
+                        title={"Are any of Company's shares held under fiduciary capacity ?"}
+                        radioChoices={["Yes", "No"]}
+                    >
 
                         <div className="conditional-input">
                             <select
@@ -334,56 +243,21 @@ function DetailsStep() {
                             </select>
                         </div>
 
-                        <span className="choice__container">
-                            <label htmlFor="companyFiduciarySharesNo">No</label>
-                            <input
-                                type="radio"
-                                id="companyFiduciarySharesNo"
-                                name="choice"
-                                value="no"
-                            />
-                        </span>
+                    </InputForm>
 
-                    </label>
+                    <InputForm
+                        name="companyInssuanceBearerShares"
+                        type="radio"
+                        title={"Do Entity's constituting documents (eg. M&As) allow for inssuance of bearer shares ?"}
+                        radioChoices={["Yes", "No"]}
+                    />
 
-                    <label id="companyInssuanceBearerShares">
-                        <h3 className="label-heading">
-                            Do Entity's constituting documents (eg. M&As) allow for inssuance of bearer shares ?
-                        </h3>
-                        <span className="choice__container">
-                            <label htmlFor="companyInssuanceBearerSharesYes">Yes</label>
-                            <input
-                                type="radio"
-                                id="companyInssuanceBearerSharesYes"
-                                name="choice"
-                                value="yes"
-                            />
-                        </span>
-
-                        <span className="choice__container">
-                            <label htmlFor="companyInssuanceBearerSharesNo">No</label>
-                            <input
-                                type="radio"
-                                id="companyInssuanceBearerSharesNo"
-                                name="choice"
-                                value="no"
-                            />
-                        </span>
-
-                    </label>
-
-                    <label id="companyLicence">
-                        <h3 className="label-heading">Is Company Licenced ?</h3>
-                        <span className="choice__container">
-                            <label htmlFor="companyLicenceYes">Yes</label>
-                            <input
-                                type="radio"
-                                id="companyLicenseYes"
-                                name="choice"
-                                value="yes"
-                            />
-                        </span>
-
+                    <InputForm
+                        name="companyLicence"
+                        type="radio"
+                        title={"Is Company Licenced ?"}
+                        radioChoices={["Yes", "No"]}
+                    >
                         <div className="conditional-input">
                             <select
                                 id="companyLicenceList"
@@ -399,48 +273,32 @@ function DetailsStep() {
                                 <option value="goldfish">Goldfish</option>
                             </select>
                         </div>
+                    </InputForm>
 
-                        <span className="choice__container">
-                            <label htmlFor="companyLicenseNo">No</label>
-                            <input
-                                type="radio"
-                                id="companyLicenseNo"
-                                name="choice"
-                                value="no"
-                            />
-                        </span>
-                    </label>
-                </fieldset>
+            </fieldset>
 
-                {/* PART 3: MAIN CONTACT DETAILS  */}
-                <fieldset id="main-contact">
-                    <legend className="title-underline">
-                        Main contact (person in charge of company's application) details
-                    </legend>
+            {/* PART 3: MAIN CONTACT DETAILS  */}
+            <fieldset id="main-contact">
+                <legend className="title-underline">
+                    Main contact (person in charge of company's application) details
+                </legend>
 
-                    <label htmlFor="companyMainContactNameInput" id="companyMainContactNameLabel">
-                        <h3 className="label-heading">Full Name</h3>
-                        <input
-                            type="text"
-                            id="companyMainContactNameInput"
-                            name="companyMainContactName"
-                            aria-label="Enter company's main contact fullname"
-                        />
-                    </label>
+                <InputForm
+                    name="companyMainContactName"
+                    type="text"
+                    title={"Full Name"}
+                    accessibility="Enter company's main contact fullname"
+                />
 
-                    <label htmlFor="companyMainContactEmailInput" id="companyMainContactEmailLabel">
-                        <h3 className="label-heading">Email address</h3>
-                        <input
-                            type="email"
-                            id="companyMainContactEmailInput"
-                            name="companyMainContactEmail"
-                            aria-label="Enter company's main contact email address"
-                        />
-                    </label>
-                </fieldset>
-                {/* TODO: formNavigation component with submitting of the page on next button */}
+                <InputForm
+                    name="companyMainContactEmail"
+                    type="email"
+                    title={"Email address"}
+                    accessibility="Enter company's main contact email address"
+                />
 
-            </form>
+            </fieldset>
+        </form >
         </>
     )
 }
