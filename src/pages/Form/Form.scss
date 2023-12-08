@@ -39,8 +39,7 @@
          color: var(--primary-clr);
          background-color: transparent;
 
-         &:hover,
-         &:focus {
+         &:hover {
              color: var(--light-clr);
              background-color: var(--primary-clr);
          }
@@ -68,58 +67,11 @@
              margin: 2em 0;
          }
 
-         label {
-             display: flex;
-             flex-direction: column;
-             text-align: left;
-             gap: 1em;
-
-             .label-heading {
-                 color: var(--primary-clr);
-                 border-inline-start: .37em solid var(--dark-clr);
-                 padding-inline-start: .25em;
-             }
-
-         }
-
-         input {
-             border: 0;
-             border-block-end: 3px solid var(--dark-clr);
-         }
-
          select {
              text-align: center;
              border-radius: 10px;
              border: 3px solid var(--dark-clr);
              background: var(--light-clr);
-         }
-
-         input:not([type="radio"]):not([type="checkbox"]),
-         select {
-             height: 2rem;
-             padding: 0 1em;
-             margin-block-end: 1em;
-         }
-
-         input[type="date"] {
-             padding: 0 .75em;
-         }
-
-         .choice__container {
-             display: flex;
-             flex-direction: row;
-             align-items: center;
-
-             input[type="radio"] {
-                 max-width: fit-content;
-                 height: fit-content;
-                 margin-inline-start: 1em;
-             }
-         }
-
-         .label-subheading {
-             color: var(--dark-clr);
-             font-size: .75rem;
          }
      }
 
@@ -137,36 +89,23 @@
              align-items: end;
              gap: 3em;
 
-             input:not([type="checkbox"])label {
-                 justify-content: end;
-             }
-
              select {
                  width: 200px;
+                 height: 2rem;
+                 padding: 0 1em;
+                 margin-block-end: 1em;
              }
          }
 
      }
  }
 
- .title-underline {
-     position: relative;
-
-     &::after {
-         @media only screen and (min-width: 768px) {
-             content: "";
-             max-width: 15%;
-             position: absolute;
-             inset: 1.875em 0 0 -2em;
-             border: 4px solid var(--dark-clr);
-             background: var(--dark-clr);
-             z-index: -1;
-         }
-     }
- }
-
- .conditional-input {
-     display: none;
+ .show {
+     display: flex;
      flex-direction: column;
      gap: 1em;
+ }
+
+ .hidden {
+     display: none;
  }

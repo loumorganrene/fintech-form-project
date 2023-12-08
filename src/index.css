@@ -1,24 +1,31 @@
 :root {
+  /* COLORS */
   --primary-clr: #4169e1;
   --light-clr: #FFF;
   --dark-clr: #173795;
   --alert-clr: #bb2649;
   --process-clr: orange;
   --validation-clr: limegreen;
+
+  /* FONT WEIGHTS */
   --md-fweight: 500;
   --xs-fweight: 300;
   --xl-fweight: 700;
   --xxl-fweight: 800;
+
+  /* CONTAINERS EFFECTS */
   --shadow: 0 5 10 0 rgba(0, 0, 0, 0.3);
 
+  /* FONTS */
   font-family: 'Lato', sans-serif;
   line-height: 1.5;
-
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+
+/* GLOBAL RESET */
 
 body,
 html,
@@ -40,7 +47,7 @@ main {
   max-width: 100%;
 }
 
-/* FONTS */
+/* HEADINGS/TEXTS */
 
 h1,
 h2 {
@@ -48,6 +55,22 @@ h2 {
   font-weight: var(--xl-fweight);
   text-transform: uppercase;
   color: inherit;
+}
+
+.title-underline {
+  position: relative;
+}
+
+@media only screen and (min-width: 768px) {
+  .title-underline::after {
+    content: "";
+    max-width: 15%;
+    position: absolute;
+    inset: 1.875em 0 0 -2em;
+    border: 4px solid var(--dark-clr);
+    background: var(--dark-clr);
+    z-index: -1;
+  }
 }
 
 h3,
@@ -60,6 +83,9 @@ p {
   font-size: clamp(.5rem, 2vw, 1rem);
 }
 
+/* ELEMENTS RESET*/
+
+/* Links*/
 a {
   display: block;
   font-size: clamp(1rem, 2vw, 1.5rem);
@@ -68,6 +94,8 @@ a {
   color: inherit;
   text-align: center;
 }
+
+/* Lists */
 
 ul,
 li {
@@ -81,6 +109,8 @@ li:focus {
   }
 }
 
+/* Images */
+
 picture {
   max-width: fit-content;
   height: auto;
@@ -90,6 +120,8 @@ img {
   max-width: 100%;
   height: auto
 }
+
+/* Buttons */
 
 button {
   display: inline-block;
@@ -101,10 +133,11 @@ button {
   cursor: pointer;
 }
 
-button:hover,
-button:focus {
+button:hover {
   opacity: .75;
 }
+
+/* ACCESSIBILITY */
 
 /* Maskable text for non-disabled people */
 .sr-only {

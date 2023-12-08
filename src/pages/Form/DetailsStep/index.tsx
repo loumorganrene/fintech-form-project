@@ -1,6 +1,39 @@
 import InputForm from "../../../components/InputForm"
+import { ChangeEvent, useState } from "react";
 
 function DetailsStep() {
+    // const [isGroup, setIsGroup] = useState("No")
+    // const [isFiduciary, setIsFiduciary] = useState("No")
+    // const [isBearerShares, setIsBearerShares] = useState("No")
+    // const [isLicence, setIsLicence] = useState("No")
+
+    const [showGroupInput, setShowGroupInput] = useState(false)
+    const [showFiduciaryInput, setShowFiduciaryInput] = useState(false)
+    const [showLicenceInput, setShowLicenceInput] = useState(false)
+
+    const handleChange = (event: ChangeEvent<HTMLInputElement | HTMLSelectElement>) => {
+        const { name, value } = event.target
+
+        if (name === "companyGroupChoice" && value === "Yes") {
+            setShowGroupInput(true)
+        } else {
+            setShowGroupInput(false)
+        }
+
+        if (name === "companyFiduciarySharesChoice" && value === "Yes") {
+            setShowFiduciaryInput(true)
+        } else {
+            setShowFiduciaryInput(false)
+        }
+
+        if (name === "companyLicenceChoice" && value === "Yes") {
+            setShowLicenceInput(true)
+        } else {
+            setShowLicenceInput(false)
+        }
+
+    }
+
     return (
         <>
             <h1 className="form-step__title title-underline">Company details</h1>
@@ -198,8 +231,9 @@ function DetailsStep() {
                             </span>
                         </>}
                         radioChoices={["Yes", "No"]}
+                        onChange={handleChange}
                     >
-                        <div className="conditional-input">
+                        <div className={showGroupInput ? "conditional-input show" : "conditional-input hidden" }>
                             <InputForm
                                 name="companyGroupRole"
                                 type="checkbox"
@@ -225,9 +259,10 @@ function DetailsStep() {
                         type="radio"
                         title={"Are any of Company's shares held under fiduciary capacity ?"}
                         radioChoices={["Yes", "No"]}
+                        onChange={handleChange}
                     >
 
-                        <div className="conditional-input">
+                        <div className={showFiduciaryInput ? "conditional-input show" : "conditional-input hidden"} >
                             <select
                                 id="companyFiduciarySharesList"
                                 name="companyFiduciarySharesList"
@@ -250,6 +285,7 @@ function DetailsStep() {
                         type="radio"
                         title={"Do Entity's constituting documents (eg. M&As) allow for inssuance of bearer shares ?"}
                         radioChoices={["Yes", "No"]}
+                        onChange={handleChange}
                     />
 
                     <InputForm
@@ -257,8 +293,9 @@ function DetailsStep() {
                         type="radio"
                         title={"Is Company Licenced ?"}
                         radioChoices={["Yes", "No"]}
+                        onChange={handleChange}
                     >
-                        <div className="conditional-input">
+                        <div className={showLicenceInput ? "conditional-input show" : "conditional-input hidden"}>
                             <select
                                 id="companyLicenceList"
                                 name="companyLicenceList"

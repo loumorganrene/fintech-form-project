@@ -10,6 +10,7 @@ function BtnNav({ changePage, action }: BtnNavParam) {
     if (action === '' || action === false) {
         return (<></>)
     }
+    
     return (
         <button
             onClick={changePage}
