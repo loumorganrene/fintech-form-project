@@ -1,18 +1,22 @@
-import { ReactNode } from 'react'
-
 import './InputForm.scss'
-interface InputPropType {
-    name: string
-    type: string
-    title?: ReactNode
-    accessibility?: string
-    radioChoices?: string[]
-    checkboxChoices?: string[]
-    placeholder?: string
-    className?: string
-    children?: ReactNode
-    noHeader?: boolean
-}
+import PropTypes from 'prop-types'
+import { InputPropType } from './InputForm'
+
+/**
+ * InputForm Component - Renders different input elements based on the provided type.
+ * @param {object} props - The props object.
+ * @param {string} props.name - The unique identifier for the input.
+ * @param {string} props.type - The type of input: 'radio' or 'checkbox'.
+ * @param {ReactNode} [props.title] - The label for the input.
+ * @param {boolean} [props.noHeader] - Indicates whether to style the label as a header or not.
+ * @param {string} [props.accessibility] - Accessibility description for the input (aria-label).
+ * @param {string[]} [props.radioChoices] - Array of choices for radio inputs.
+ * @param {string[]} [props.checkboxChoices] - Array of choices for checkbox inputs.
+ * @param {string} [props.placeholder] - Placeholder text for the input field.
+ * @param {string} [props.className] - Custom class for the input container.
+ * @param {ReactNode} [props.children] - Additional children to be rendered.
+ * @returns {JSX.Element} JSX Element representing the input form.
+ */
 
 function InputForm({ name, type, title, noHeader, accessibility, placeholder, radioChoices, checkboxChoices, className, children }: InputPropType) {
     const isRadio = type === "radio"
@@ -80,6 +84,19 @@ function InputForm({ name, type, title, noHeader, accessibility, placeholder, ra
                 )
             }
         </>)
+}
+
+InputForm.propTypes = {
+    name: PropTypes.string.isRequired,
+    type: PropTypes.string.isRequired,
+    title: PropTypes.node,
+    noHeader: PropTypes.bool,
+    accessibility: PropTypes.string,
+    radioChoices: PropTypes.arrayOf(PropTypes.string),
+    checkboxChoices: PropTypes.arrayOf(PropTypes.string),
+    placeholder: PropTypes.string,
+    className: PropTypes.string,
+    children: PropTypes.node,
 }
 
 export default InputForm
