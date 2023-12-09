@@ -13,7 +13,7 @@ import PropTypes from 'prop-types'
  * @param {string[]} [props.checkboxChoices] - Array of choices for checkbox inputs.
  * @param {string} [props.placeholder] - Placeholder text for the input field.
  * @param {string} [props.className] - Custom class for the input container.
- * @property {ChangeEventHandler} [props.onChange] - Event handler for change events on checked input.
+ * @param {ChangeEventHandler} [props.onChange] - Event handler for change events on checked input.
  * @param {ReactNode} [props.children] - Additional children to be rendered.
  * @returns {JSX.Element} JSX Element representing the input form.
  */

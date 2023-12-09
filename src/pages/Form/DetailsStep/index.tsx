@@ -12,19 +12,19 @@ function DetailsStep() {
 
         if (name === "companyGroupChoice" && value === "Yes") {
             setShowGroupInput(true)
-        } else {
+        } else if (name === "companyGroupChoice" && value === "No") {
             setShowGroupInput(false)
         }
 
         if (name === "companyFiduciarySharesChoice" && value === "Yes") {
             setShowFiduciaryInput(true)
-        } else {
+        } else if (name === "companyFiduciarySharesChoice" && value === "No") {
             setShowFiduciaryInput(false)
         }
 
         if (name === "companyLicenceChoice" && value === "Yes") {
             setShowLicenceInput(true)
-        } else {
+        } else if (name === "companyLicenceChoice" && value === "No") {
             setShowLicenceInput(false)
         }
 
@@ -108,6 +108,7 @@ function DetailsStep() {
 
                     <label htmlFor="companyNumberEmployeesList" id="companyNumberEmployeesLabel">
                         <h3 className="label-heading">Number of Employees</h3>
+                        {/* TODO : Collabsible dropdown menu with searchbar component */}
                         <select
                             id="companyNumberEmployeesList"
                             name="companyNumberEmployeesList"
@@ -229,7 +230,7 @@ function DetailsStep() {
                         radioChoices={["Yes", "No"]}
                         onChange={handleChange}
                     >
-                        <div className={showGroupInput ? "conditional-input show" : "conditional-input hidden" }>
+                        <div className={showGroupInput ? "conditional-input show" : "conditional-input hidden"}>
                             <InputForm
                                 name="companyGroupRole"
                                 type="checkbox"
@@ -259,6 +260,7 @@ function DetailsStep() {
                     >
 
                         <div className={showFiduciaryInput ? "conditional-input show" : "conditional-input hidden"} >
+                            {/* TODO : Collabsible dropdown menu with searchbar component */}
                             <select
                                 id="companyFiduciarySharesList"
                                 name="companyFiduciarySharesList"
@@ -281,7 +283,6 @@ function DetailsStep() {
                         type="radio"
                         title={"Do Entity's constituting documents (eg. M&As) allow for inssuance of bearer shares ?"}
                         radioChoices={["Yes", "No"]}
-                        onChange={handleChange}
                     />
 
                     <InputForm
@@ -292,6 +293,7 @@ function DetailsStep() {
                         onChange={handleChange}
                     >
                         <div className={showLicenceInput ? "conditional-input show" : "conditional-input hidden"}>
+                            {/* TODO : Collabsible dropdown menu with searchbar component */}
                             <select
                                 id="companyLicenceList"
                                 name="companyLicenceList"
