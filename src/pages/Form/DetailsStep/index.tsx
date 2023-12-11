@@ -2,12 +2,12 @@ import InputForm from "../../../components/InputForm"
 import { ChangeEvent, useState } from "react";
 
 function DetailsStep() {
-
+    /* CONDITIONAL INPUT RENDERING*/
     const [showGroupInput, setShowGroupInput] = useState(false)
     const [showFiduciaryInput, setShowFiduciaryInput] = useState(false)
     const [showLicenceInput, setShowLicenceInput] = useState(false)
 
-    const handleChange = (event: ChangeEvent<HTMLInputElement | HTMLSelectElement>) => {
+    const handleRadioChecked = (event: ChangeEvent<HTMLInputElement | HTMLSelectElement>) => {
         const { name, value } = event.target
 
         if (name === "companyGroupChoice" && value === "Yes") {
@@ -228,7 +228,7 @@ function DetailsStep() {
                             </span>
                         </>}
                         radioChoices={["Yes", "No"]}
-                        onChange={handleChange}
+                        onChange={handleRadioChecked}
                     >
                         <div className={showGroupInput ? "conditional-input show" : "conditional-input hidden"}>
                             <InputForm
@@ -256,7 +256,7 @@ function DetailsStep() {
                         type="radio"
                         title={"Are any of Company's shares held under fiduciary capacity ?"}
                         radioChoices={["Yes", "No"]}
-                        onChange={handleChange}
+                        onChange={handleRadioChecked}
                     >
 
                         <div className={showFiduciaryInput ? "conditional-input show" : "conditional-input hidden"} >
@@ -290,7 +290,7 @@ function DetailsStep() {
                         type="radio"
                         title={"Is Company Licenced ?"}
                         radioChoices={["Yes", "No"]}
-                        onChange={handleChange}
+                        onChange={handleRadioChecked}
                     >
                         <div className={showLicenceInput ? "conditional-input show" : "conditional-input hidden"}>
                             {/* TODO : Collabsible dropdown menu with searchbar component */}

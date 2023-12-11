@@ -1,9 +1,13 @@
 import './BtnNav.scss'
+import PropTypes from 'prop-types'
 
-interface BtnNavParam {
-    changePage: (() => void) | ((e: React.FormEvent<HTMLButtonElement>) => void)
-    action: string | boolean
-}
+/**
+ * Button Navigation component.
+ * @param {object} props - The props object.
+ * @param {Function} props.changePage - Function to change the page. Can be a function taking no arguments or a function taking an event.
+ * @param {(string|boolean)} props.action - Action to be performed or boolean value for conditional rendering.
+ * @returns {JSX.Element} Button Navigation component.
+ */
 
 function BtnNav({ changePage, action }: BtnNavParam) {
 
@@ -19,5 +23,16 @@ function BtnNav({ changePage, action }: BtnNavParam) {
         </button>
     )
 }
+
+BtnNav.propTypes = {
+    changePage: PropTypes.oneOfType([
+        PropTypes.func,
+        PropTypes.func.isRequired,
+    ]).isRequired,
+    action: PropTypes.oneOfType([
+        PropTypes.string,
+        PropTypes.bool,
+    ]).isRequired,
+};
 
 export default BtnNav
