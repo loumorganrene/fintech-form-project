@@ -1,3 +1,4 @@
+import DropdownWithSearchbar from "../../../components/DropdownWithSearchbar";
 import InputForm from "../../../components/InputForm"
 import { ChangeEvent, useState } from "react";
 
@@ -54,20 +55,13 @@ function DetailsStep() {
 
                     <label htmlFor="companyTypeList" id="companyTypeLabel">
                         <h3 className="label-heading">Type of Company</h3>
-                        {/* TODO : Collabsible dropdown menu with searchbar component */}
-                        <select
-                            id="companyTypeList"
-                            name="companyTypeList"
-                            aria-label="Choose company's type"
-                        >
-                            <option value="">-- Choose a type --</option>
-                            <option value="dog">Dog</option>
-                            <option value="cat">Cat</option>
-                            <option value="hamster">Hamster</option>
-                            <option value="parrot">Parrot</option>
-                            <option value="spider">Spider</option>
-                            <option value="goldfish">Goldfish</option>
-                        </select>
+                        <DropdownWithSearchbar
+                            label="-- Choose a type --"
+                            subject="companyType"
+                            accessibility="Choose company's type"
+                            elementList={["Dog", "Cat", "Hamster", "Parrot"]}
+                            searchbar
+                        />
                     </label>
 
                     <InputForm
@@ -90,38 +84,23 @@ function DetailsStep() {
 
                     <label htmlFor="companyIncorporationCountryList" id="companyIncorporationCountryLabel">
                         <h3 className="label-heading">Country of Incorporation</h3>
-                        {/* TODO : Collabsible dropdown menu with searchbar component */}
-                        <select
-                            id="companyIncorporationCountryList"
-                            name="companyIncorporationCountryList"
-                            aria-label="Choose company's country of incorporation"
-                        >
-                            <option value="">-- Choose a country --</option>
-                            <option value="dog">Dog</option>
-                            <option value="cat">Cat</option>
-                            <option value="hamster">Hamster</option>
-                            <option value="parrot">Parrot</option>
-                            <option value="spider">Spider</option>
-                            <option value="goldfish">Goldfish</option>
-                        </select>
+                        <DropdownWithSearchbar
+                            label="-- Choose a country --"
+                            subject="companyIncorporationCountry"
+                            accessibility="Choose company's country of incorporation"
+                            elementList={["Dog", "Cat", "Hamster", "Parrot"]}
+                            searchbar
+                        />
                     </label>
 
                     <label htmlFor="companyNumberEmployeesList" id="companyNumberEmployeesLabel">
                         <h3 className="label-heading">Number of Employees</h3>
-                        {/* TODO : Collabsible dropdown menu with searchbar component */}
-                        <select
-                            id="companyNumberEmployeesList"
-                            name="companyNumberEmployeesList"
-                            aria-label="Choose company's range of employees number"
-                        >
-                            <option value="">-- Choose a range --</option>
-                            <option value="one">Dog</option>
-                            <option value="cat">Cat</option>
-                            <option value="hamster">Hamster</option>
-                            <option value="parrot">Parrot</option>
-                            <option value="spider">Spider</option>
-                            <option value="goldfish">Goldfish</option>
-                        </select>
+                        <DropdownWithSearchbar
+                            label="-- Choose a range --"
+                            subject="companyNumberEmployees"
+                            accessibility="Choose company's range of employees number"
+                            elementList={["Dog", "Cat", "Hamster", "Parrot"]}
+                        />
                     </label>
 
                     <InputForm
@@ -147,20 +126,13 @@ function DetailsStep() {
 
                     <label htmlFor="companyIndustryTypeList" id="companyIndustryTypeLabel">
                         <h3 className="label-heading">Industry Type</h3>
-                        {/* TODO : Collabsible dropdown menu with searchbar component */}
-                        <select
-                            id="companyIndustryTypeList"
-                            name="companyIndustryTypeList"
-                            aria-label="Choose an industry type"
-                        >
-                            <option value="">-- Choose an industry type --</option>
-                            <option value="one">Dog</option>
-                            <option value="cat">Cat</option>
-                            <option value="hamster">Hamster</option>
-                            <option value="parrot">Parrot</option>
-                            <option value="spider">Spider</option>
-                            <option value="other">Other</option>
-                        </select>
+                        <DropdownWithSearchbar
+                            label="-- Choose an industry type --"
+                            subject="companyIndustryType"
+                            accessibility="Choose an industry type"
+                            elementList={["Dog", "Cat", "Hamster", "Parrot"]}
+                            searchbar
+                        />
                     </label>
 
                     <div className="conditional-input">
@@ -260,20 +232,13 @@ function DetailsStep() {
                     >
 
                         <div className={showFiduciaryInput ? "conditional-input show" : "conditional-input hidden"} >
-                            {/* TODO : Collabsible dropdown menu with searchbar component */}
-                            <select
-                                id="companyFiduciarySharesList"
-                                name="companyFiduciarySharesList"
-                                aria-label="Choose company's fiduciary"
-                            >
-                                <option value="">-- Choose a fiduciary --</option>
-                                <option value="dog">Dog</option>
-                                <option value="cat">Cat</option>
-                                <option value="hamster">Hamster</option>
-                                <option value="parrot">Parrot</option>
-                                <option value="spider">Spider</option>
-                                <option value="goldfish">Goldfish</option>
-                            </select>
+                            <DropdownWithSearchbar
+                                label="-- Choose a fiduciary --"
+                                subject="companyFiduciaryShares"
+                                accessibility="Choose company's fiduciary"
+                                elementList={["Dog", "Cat", "Hamster", "Parrot"]}
+                                searchbar
+                            />
                         </div>
 
                     </InputForm>
@@ -293,20 +258,13 @@ function DetailsStep() {
                         onChange={handleRadioChecked}
                     >
                         <div className={showLicenceInput ? "conditional-input show" : "conditional-input hidden"}>
-                            {/* TODO : Collabsible dropdown menu with searchbar component */}
-                            <select
-                                id="companyLicenceList"
-                                name="companyLicenceList"
-                                aria-label="Choose company's licence"
-                            >
-                                <option value="">-- Choose a licence --</option>
-                                <option value="dog">Dog</option>
-                                <option value="cat">Cat</option>
-                                <option value="hamster">Hamster</option>
-                                <option value="parrot">Parrot</option>
-                                <option value="spider">Spider</option>
-                                <option value="goldfish">Goldfish</option>
-                            </select>
+                            <DropdownWithSearchbar
+                                label="-- Choose a licence --"
+                                subject="companyLicence"
+                                accessibility="Choose company's licence"
+                                elementList={["Dog", "Cat", "Hamster", "Parrot"]}
+                                searchbar
+                            />
                         </div>
                     </InputForm>
 

@@ -20,19 +20,11 @@ input {
     border: 0;
     border-block-end: 3px solid var(--dark-clr);
 
-    &:not([type="radio"]):not([type="checkbox"]),
-    select {
-        height: 2rem;
-        padding: 0 1em;
-        margin-block-end: 1em;
-    }
-
     &input[type="date"] {
         padding: 0 .75em;
     }
 
-    &:not([type="radio"]):not([type="checkbox"]),
-    select {
+    &:not([type="radio"]):not([type="checkbox"]) {
         height: 2rem;
         padding: 0 1em;
         margin-block-end: 1em;

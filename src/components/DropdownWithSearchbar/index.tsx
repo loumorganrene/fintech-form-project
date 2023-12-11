@@ -6,13 +6,16 @@ interface DropdownProps {
   subject: string,
   elementList: string[],
   regex?: string,
+  searchbar?: boolean,
+  accessibility: string,
 }
 
-function DropdownWithSearchbar({ label, subject, elementList, regex }: DropdownProps) {
+function DropdownWithSearchbar({ label, subject, elementList, regex, accessibility, searchbar }: DropdownProps) {
   const [isExpanded, setIsExpanded] = useState(false)
+  const withSearchbar = searchbar === true
   // const [state, setState] = useState()
 
-  const handleDropdownOpening= ()=> {
+  const handleDropdownOpening = () => {
     setIsExpanded(!isExpanded)
   }
 
@@ -25,26 +28,29 @@ function DropdownWithSearchbar({ label, subject, elementList, regex }: DropdownP
   return (
     <>
       <div className="dropdown__container">
-        <button
+        <div
+          id={subject + "List"}
           className="dropdown__button--toggle"
           aria-expanded={isExpanded}
           aria-controls={subject + "List"}
+          aria-label={accessibility}
           onClick={handleDropdownOpening}
         >
           {label}
-        </button>
+        </div>
 
-        <div className={"dropdown__menu" + (isExpanded === false && "hidden")}>
-          <input
-            id={subject + "Dropdown"}
-            name="search"
-            type="search"
-            role="search"
-            className="dropdown__searchbar"
-            aria-label={"Search for " + subject}
-            placeholder="Search..."
-            pattern={regex}
-          />
+        <div className={(isExpanded === false ? "hidden" : "dropdown__menu")}>
+          {withSearchbar &&
+            <input
+              id={subject + "Dropdown"}
+              name="search"
+              type="search"
+              role="search"
+              className="dropdown__searchbar"
+              aria-label={"Search for " + subject}
+              placeholder="Search..."
+              pattern={regex}
+            />}
 
           <ul id={subject + "List"} className="dropdown__list">
             {elementList.map((element: string, index) =>
