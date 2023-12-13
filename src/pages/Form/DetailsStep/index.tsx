@@ -69,6 +69,7 @@ function DetailsStep() {
                             accessibility="Choose company's type"
                             elementList={europeanCompanyTypes}
                             searchbar
+                            regex="/[A-Za-z]/g"
                         />
                     </label>
 

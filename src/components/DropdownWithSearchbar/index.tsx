@@ -69,7 +69,7 @@ function DropdownWithSearchbar({ label, subject, elementList, regex, accessibili
 
             <ul id={subject + "List"} className="dropdown__list">
               {elementList
-                .filter(element => element.includes(userQuery))
+                .filter(element => element.toLowerCase().includes(userQuery.toLowerCase()))
                 .map((element: string, index) =>
                   <li
                     key={"item-" + index}
