@@ -1,7 +1,7 @@
 import { RefObject, useEffect } from "react";
 
 interface useOutsideClickProps {
-    ref: RefObject<HTMLDivElement>
+    ref: RefObject<HTMLUListElement>
     onClickOut: () => void
     deps?: React.DependencyList
 }
@@ -20,6 +20,6 @@ export function useOutsideClick({ref, onClickOut, deps}:useOutsideClickProps) {
         return () => {
             document.removeEventListener("click", onClick)
         }
-        
+
     }, [onClickOut, ref, ...(deps ?? [])])// eslint-disable-line react-hooks/exhaustive-deps
 }

@@ -23,7 +23,7 @@ function DropdownWithSearchbar({ label, subject, elementList, regex, accessibili
     setIsExpanded(!isExpanded)
   }
 
-  const dropdownContainer = useRef<HTMLDivElement>(null)
+  const dropdownContainer = useRef<HTMLUListElement>(null)
   const handleClickOutside = () => {
     setIsExpanded(false)
   }
@@ -35,44 +35,55 @@ function DropdownWithSearchbar({ label, subject, elementList, regex, accessibili
 
   return (
     <>
-      <div className="dropdown__container" ref={dropdownContainer}>
-        <div
+      <ul className="dropdown__container" ref={dropdownContainer}>
+        <li
+          role="button"
           id={subject + "List"}
           className="dropdown__button--toggle"
-          aria-expanded={isExpanded}
           aria-controls={subject + "List"}
           aria-label={accessibility}
+          tabIndex={0}
           onClick={handleDropdownToggle}
         >
           {label}
-        </div>
+        </li>
 
-        {isExpanded && <div className="dropdown__menu">
-          {withSearchbar &&
-            <input
-              id={subject + "Dropdown"}
-              name="search"
-              type="search"
-              role="search"
-              className="dropdown__searchbar"
-              aria-label={"Search for " + subject}
-              placeholder="Search..."
-              pattern={regex}
-              onChange={(e) => setUserQuery(e.target.value)}
-            />}
+        {isExpanded &&
+          <li
+            role="list"
+            className="dropdown__menu"
+            aria-expanded={isExpanded}
+          >
+            {withSearchbar &&
+              <input
+                id={subject + "Dropdown"}
+                name="search"
+                type="search"
+                role="search"
+                className="dropdown__searchbar"
+                aria-label={"Search for " + subject}
+                placeholder="Search..."
+                pattern={regex}
+                onChange={(e) => setUserQuery(e.target.value)}
+              />}
 
-          <ul id={subject + "List"} className="dropdown__list">
-            {elementList
-              .filter(element => element.includes(userQuery))
-              .map((element: string, index) =>
-                <li key={"item-" + index} className="dropdown--item">
-                  {element}
-                </li>
-              )}
-          </ul>
+            <ul id={subject + "List"} className="dropdown__list">
+              {elementList
+                .filter(element => element.includes(userQuery))
+                .map((element: string, index) =>
+                  <li
+                    key={"item-" + index}
+                    className="dropdown--item"
+                    id={"option-" + index + 1}
+                    tabIndex={0}
+                  >
+                    {element}
+                  </li>
+                )}
+            </ul>
 
-        </div>}
-      </div>
+          </li>}
+      </ul>
     </>
   )
 }
