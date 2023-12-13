@@ -16,6 +16,7 @@
   /* CONTAINERS EFFECTS */
   --bottom-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.3);
   --right-shadow: 5px 0px 10px 0px rgba(0, 0, 0, 0.3);
+  --element-shadow: drop-shadow(0px 5px 8px rgba(0, 0, 0, 0.6));
 
   /* FONTS */
   font-family: 'Lato', sans-serif;
@@ -102,14 +103,6 @@ ul,
 li {
   list-style-type: none;
 }
-
-li:hover,
-li:focus {
-  a {
-    opacity: .75;
-  }
-}
-
 /* Images */
 
 picture {
@@ -132,11 +125,10 @@ button {
   background-color: transparent;
   border: 0;
   cursor: pointer;
-  filter: drop-shadow(0px 5px 8px rgba(0, 0, 0, 0.6));
+  filter: var(--element-shadow);
 }
 
 button:hover {
-  opacity: .75;
   filter: drop-shadow(0px 5px 8px rgba(0, 0, 0, 0.0));
 }
 

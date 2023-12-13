@@ -9,8 +9,16 @@ header {
     box-shadow: var(--bottom-shadow);
     z-index: 2;
 
-    i {
-        font-size: clamp(1.5rem, 3vw, 2rem);
+    a {
+
+        i {
+            font-size: clamp(1.5rem, 3vw, 2rem);
+            filter: var(--element-shadow);
+        }
+
+        &:hover i {
+            filter: none;
+        }
     }
 
     p {
