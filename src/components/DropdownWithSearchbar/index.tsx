@@ -7,23 +7,20 @@ interface DropdownProps {
   elementList: string[],
   regex?: string,
   searchbar?: boolean,
+  multiSelection?: boolean,
   accessibility: string,
 }
 
 function DropdownWithSearchbar({ label, subject, elementList, regex, accessibility, searchbar }: DropdownProps) {
   const [isExpanded, setIsExpanded] = useState(false)
   const withSearchbar = searchbar === true
-  // const [state, setState] = useState()
+  // const withMultiSelection = multiSelection === true
+
+  const [userQuery, setUserQuery] = useState("")
 
   const handleDropdownOpening = () => {
     setIsExpanded(!isExpanded)
   }
-
-  // const handleSearchbar = (e: ChangeEvent<HTMLInputElement | HTMLSelectElement>)=> {
-  //   const { value } = e.target
-
-
-  // }
 
   return (
     <>
@@ -50,14 +47,17 @@ function DropdownWithSearchbar({ label, subject, elementList, regex, accessibili
               aria-label={"Search for " + subject}
               placeholder="Search..."
               pattern={regex}
+              onChange={(e) => setUserQuery(e.target.value)}
             />}
 
           <ul id={subject + "List"} className="dropdown__list">
-            {elementList.map((element: string, index) =>
-              <li key={"item-" + index} className="dropdown--item">
-                {element}
-              </li>
-            )}
+            {elementList
+              .filter(element => element.includes(userQuery))
+              .map((element: string, index) =>
+                <li key={"item-" + index} className="dropdown--item">
+                  {element}
+                </li>
+              )}
           </ul>
 
         </div>

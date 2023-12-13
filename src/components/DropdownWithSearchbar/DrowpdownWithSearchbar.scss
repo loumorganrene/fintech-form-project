@@ -3,7 +3,8 @@
     display: flex;
     flex-direction: column;
     margin-block-end: 1em;
-    max-width: 80%;
+    max-width: 300px;
+    width: 100%;
 
     .dropdown__button--toggle {
         text-align: center;
@@ -17,8 +18,8 @@
     .dropdown__menu {
         position: absolute;
         top: 2.5em;
-        max-width: 100%;
-        width: 250px;
+        max-width: 300px;
+        width: 100%;
         display: flex;
         flex-direction: column;
         padding: 1em;
