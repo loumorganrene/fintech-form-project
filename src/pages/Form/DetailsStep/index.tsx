@@ -1,12 +1,22 @@
 import DropdownWithSearchbar from "../../../components/DropdownWithSearchbar";
 import InputForm from "../../../components/InputForm"
 import { ChangeEvent, useState } from "react";
+import { 
+    europeanCompanyTypes, 
+    europeanCountries, 
+    europeanEmployeeRanges, 
+    industryList,
+    europeanCompanyLicenseTypes,
+    europeanFiduciaryRoles
+} from "../../../mock/dataListsMock.ts"
 
 function DetailsStep() {
     /* CONDITIONAL INPUT RENDERING*/
     const [showGroupInput, setShowGroupInput] = useState(false)
     const [showFiduciaryInput, setShowFiduciaryInput] = useState(false)
     const [showLicenceInput, setShowLicenceInput] = useState(false)
+
+    console.log(industryList)
 
     const handleRadioChecked = (event: ChangeEvent<HTMLInputElement | HTMLSelectElement>) => {
         const { name, value } = event.target
@@ -59,7 +69,7 @@ function DetailsStep() {
                             label="-- Choose a type --"
                             subject="companyType"
                             accessibility="Choose company's type"
-                            elementList={["Dog", "Cat", "Hamster", "Parrot"]}
+                            elementList={europeanCompanyTypes}
                             searchbar
                         />
                     </label>
@@ -88,7 +98,7 @@ function DetailsStep() {
                             label="-- Choose a country --"
                             subject="companyIncorporationCountry"
                             accessibility="Choose company's country of incorporation"
-                            elementList={["Dog", "Cat", "Hamster", "Parrot"]}
+                            elementList={europeanCountries}
                             searchbar
                         />
                     </label>
@@ -99,7 +109,7 @@ function DetailsStep() {
                             label="-- Choose a range --"
                             subject="companyNumberEmployees"
                             accessibility="Choose company's range of employees number"
-                            elementList={["Dog", "Cat", "Hamster", "Parrot"]}
+                            elementList={europeanEmployeeRanges}
                         />
                     </label>
 
@@ -130,7 +140,7 @@ function DetailsStep() {
                             label="-- Choose an industry type --"
                             subject="companyIndustryType"
                             accessibility="Choose an industry type"
-                            elementList={["Dog", "Cat", "Hamster", "Parrot"]}
+                            elementList={industryList}
                             searchbar
                         />
                     </label>
@@ -236,7 +246,7 @@ function DetailsStep() {
                                 label="-- Choose a fiduciary --"
                                 subject="companyFiduciaryShares"
                                 accessibility="Choose company's fiduciary"
-                                elementList={["Dog", "Cat", "Hamster", "Parrot"]}
+                                elementList={europeanFiduciaryRoles}
                                 searchbar
                             />
                         </div>
@@ -262,7 +272,7 @@ function DetailsStep() {
                                 label="-- Choose a licence --"
                                 subject="companyLicence"
                                 accessibility="Choose company's licence"
-                                elementList={["Dog", "Cat", "Hamster", "Parrot"]}
+                                elementList={europeanCompanyLicenseTypes}
                                 searchbar
                             />
                         </div>

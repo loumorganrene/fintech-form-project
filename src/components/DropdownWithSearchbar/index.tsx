@@ -13,14 +13,18 @@ interface DropdownProps {
 
 function DropdownWithSearchbar({ label, subject, elementList, regex, accessibility, searchbar }: DropdownProps) {
   const [isExpanded, setIsExpanded] = useState(false)
+  const [userQuery, setUserQuery] = useState("")
+
   const withSearchbar = searchbar === true
   // const withMultiSelection = multiSelection === true
-
-  const [userQuery, setUserQuery] = useState("")
 
   const handleDropdownOpening = () => {
     setIsExpanded(!isExpanded)
   }
+
+  // const handleTagCreation = () => {
+
+  // }
 
   return (
     <>
