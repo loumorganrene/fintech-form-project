@@ -8,7 +8,8 @@
 [![React Mini Modal](https://img.shields.io/badge/React%20Mini%20Modal-808080.svg?style=for-the-badge&logo=react&logoColor=white)](https://github.com/loumorganrene/react-mini-modal#react-mini-modal-)
 
 
-A company's internal form application.
+A multiple step form for company's application.
+
 This codebase contains the updated code needed to run the frontend.
 
 ## Installation
