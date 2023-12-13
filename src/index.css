@@ -14,7 +14,8 @@
   --xxl-fweight: 800;
 
   /* CONTAINERS EFFECTS */
-  --shadow: 0 5 10 0 rgba(0, 0, 0, 0.3);
+  --bottom-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.3);
+  --right-shadow: 5px 0px 10px 0px rgba(0, 0, 0, 0.3);
 
   /* FONTS */
   font-family: 'Lato', sans-serif;
@@ -131,10 +132,12 @@ button {
   background-color: transparent;
   border: 0;
   cursor: pointer;
+  filter: drop-shadow(0px 5px 8px rgba(0, 0, 0, 0.6));
 }
 
 button:hover {
   opacity: .75;
+  filter: drop-shadow(0px 5px 8px rgba(0, 0, 0, 0.0));
 }
 
 /* ACCESSIBILITY */

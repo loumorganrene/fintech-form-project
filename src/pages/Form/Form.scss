@@ -38,11 +38,6 @@
      .previous {
          color: var(--primary-clr);
          background-color: transparent;
-
-         &:hover {
-             color: var(--light-clr);
-             background-color: var(--primary-clr);
-         }
      }
  }
 

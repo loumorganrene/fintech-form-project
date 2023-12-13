@@ -6,6 +6,8 @@ header {
     align-items: center;
     background-color: var(--primary-clr);
     color: var(--light-clr);
+    box-shadow: var(--bottom-shadow);
+    z-index: 2;
 
     i {
         font-size: clamp(1.5rem, 3vw, 2rem);
