@@ -13,10 +13,11 @@
   --xl-fweight: 700;
   --xxl-fweight: 800;
 
-  /* CONTAINERS EFFECTS */
+  /* EFFECTS */
+  /* Shadows*/
   --bottom-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.3);
   --right-shadow: 5px 0px 10px 0px rgba(0, 0, 0, 0.3);
-  --element-shadow: drop-shadow(0px 5px 8px rgba(0, 0, 0, 0.6));
+  --element-shadow: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.3));
 
   /* FONTS */
   font-family: 'Lato', sans-serif;

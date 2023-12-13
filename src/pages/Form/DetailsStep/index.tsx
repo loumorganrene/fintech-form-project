@@ -16,8 +16,6 @@ function DetailsStep() {
     const [showFiduciaryInput, setShowFiduciaryInput] = useState(false)
     const [showLicenceInput, setShowLicenceInput] = useState(false)
 
-    console.log(industryList)
-
     const handleRadioChecked = (event: ChangeEvent<HTMLInputElement | HTMLSelectElement>) => {
         const { name, value } = event.target
 

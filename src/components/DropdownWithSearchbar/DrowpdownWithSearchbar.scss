@@ -13,6 +13,7 @@
         background: var(--light-clr);
         padding: .75em 1em;
         min-height: 2rem;
+        cursor: pointer;
     }
 
     .dropdown__menu {
@@ -32,6 +33,9 @@
 
         ul {
             overflow-y: scroll;
+            li {
+                cursor: pointer;
+            }
         }
     }
 }
