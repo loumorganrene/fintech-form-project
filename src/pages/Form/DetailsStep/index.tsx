@@ -206,7 +206,7 @@ function DetailsStep() {
                             Is company part of a Group ?
                             <br />
                             <span className="label-subheading">
-                                (If "yes", please provide Group Corporate Structure)
+                                (If &quot;yes&quot;, please provide Group Corporate Structure)
                             </span>
                         </>}
                         radioChoices={["Yes", "No"]}
@@ -283,7 +283,7 @@ function DetailsStep() {
                 {/* PART 3: MAIN CONTACT DETAILS  */}
                 <fieldset id="main-contact">
                     <legend className="title-underline">
-                        Main contact (person in charge of company's application) details
+                        Main contact (person in charge of company&apos;s application) details
                     </legend>
 
                     <InputForm
