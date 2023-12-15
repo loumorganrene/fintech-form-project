@@ -22,12 +22,23 @@ function DropdownWithSearchbar({ label, subject, elementList, regex, accessibili
   const handleDropdownToggle = () => {
     setIsExpanded(!isExpanded)
   }
-
   const dropdownContainer = useRef<HTMLUListElement>(null)
-  const handleClickOutside = () => {
+  const handleDropdownClose = () => {
     setIsExpanded(false)
   }
-  useOutsideClick({ ref: dropdownContainer, onClickOut: handleClickOutside })
+  useOutsideClick({ ref: dropdownContainer, onClickOut: handleDropdownClose })
+
+  // const handleKeyboardAccess = () => {
+  //   const SPACEBAR_KEY_CODE = 32 || 'Space'
+  //   const ENTER_KEY_CODE = 13 || 'Enter'
+  //   const DOWN_ARROW_KEY_CODE = 40 || 'ArrowDown'
+  //   const UP_ARROW_KEY_CODE = 38 || 'ArrowUp'
+  //   const ESCAPE_KEY_CODE = 27 || 'Escape'
+
+  //   useEffect(()=>{
+      
+  //   })
+  // }
 
   // const handleTagCreation = () => {
 

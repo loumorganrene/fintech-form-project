@@ -1,29 +1,12 @@
 export const europeanCompanyTypes = [
-    "Societas Europaea (SE)",
-    "Société Anonyme (SA)",
-    "Sociedad Anónima (SA)",
-    "Aktiengesellschaft (AG)",
-    "Gesellschaft mit beschränkter Haftung (GmbH)",
-    "Società per Azioni (SpA)",
-    "Public Limited Company (PLC)",
-    "Private Limited Company (Ltd)",
-    "Kommanditgesellschaft auf Aktien (KGaA)",
-    "Commanditaire Vennootschap op Aandelen (Comm. VA)",
-    "Société en Commandite par Actions (SCA)",
-    "Sociedad Limitada (SL)",
-    "Sociedad de Responsabilidad Limitada (SRL)",
-    "Société à Responsabilité Limitée (SARL)",
-    "Société en Nom Collectif (SNC)",
-    "Sociedade Anónima Europeia (SE)",
-    "Societate pe Acțiuni (SA)",
-    "Societate cu Răspundere Limitată (SRL)",
-    "Osakeyhtiö (OY)",
-    "Julkinen Osakeyhtiö (OYJ)",
-    "Aktiebolag (AB)",
-    "Enkeltmandsvirksomhed",
-    "Vennootschap onder Firma (VOF)",
-    "Naamloze Vennootschap (NV)",
-    "Besloten Vennootschap (BV)",
+    "Trading",
+    "Holding",
+    "Partnership",
+    "Foundation",
+    "Charities / MPOs",
+    "Trust",
+    "Public Listed Company"
+
 ]
 
 export const europeanCountries = [
@@ -236,6 +219,13 @@ export const industryList = [
     "Wine / Spirits",
     "Wireless",
     "Writing / Editing"
+]
+
+export const companyTurnoverRange = [
+    "None",
+    "Less than 1 Million",
+    "between 1 and 3 Millions",
+    "More than 3 Millions"
 ]
 
 export const europeanCompanyLicenseTypes = [

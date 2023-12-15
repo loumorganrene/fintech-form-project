@@ -1,13 +1,14 @@
 import DropdownWithSearchbar from "../../../components/DropdownWithSearchbar";
 import InputForm from "../../../components/InputForm"
 import { ChangeEvent, useState } from "react";
-import { 
-    europeanCompanyTypes, 
-    europeanCountries, 
-    europeanEmployeeRanges, 
+import {
+    europeanCompanyTypes,
+    europeanCountries,
+    europeanEmployeeRanges,
     industryList,
-    europeanCompanyLicenseTypes,
-    europeanFiduciaryRoles
+
+    europeanFiduciaryRoles,
+    companyTurnoverRange
 } from "../../../mock/dataListsMock.ts"
 
 function DetailsStep() {
@@ -64,7 +65,7 @@ function DetailsStep() {
                     <label htmlFor="companyTypeList" id="companyTypeLabel">
                         <h3 className="label-heading">Type of Company</h3>
                         <DropdownWithSearchbar
-                            label="-- Choose a type --"
+                            label="-- Select a type --"
                             subject="companyType"
                             accessibility="Choose company's type"
                             elementList={europeanCompanyTypes}
@@ -94,7 +95,7 @@ function DetailsStep() {
                     <label htmlFor="companyIncorporationCountryList" id="companyIncorporationCountryLabel">
                         <h3 className="label-heading">Country of Incorporation</h3>
                         <DropdownWithSearchbar
-                            label="-- Choose a country --"
+                            label="-- Select a country --"
                             subject="companyIncorporationCountry"
                             accessibility="Choose company's country of incorporation"
                             elementList={europeanCountries}
@@ -105,7 +106,7 @@ function DetailsStep() {
                     <label htmlFor="companyNumberEmployeesList" id="companyNumberEmployeesLabel">
                         <h3 className="label-heading">Number of Employees</h3>
                         <DropdownWithSearchbar
-                            label="-- Choose a range --"
+                            label="-- Select a range --"
                             subject="companyNumberEmployees"
                             accessibility="Choose company's range of employees number"
                             elementList={europeanEmployeeRanges}
@@ -126,17 +127,21 @@ function DetailsStep() {
                         accessibility="Enter company's tax identification number"
                     />
 
-                    <InputForm
-                        name="companyTINJurisdiction"
-                        type="text"
-                        title={"TIN Jurisdiction"}
-                        accessibility="Enter company's TIN jurisdiction"
-                    />
+                    <label htmlFor="companyTINJurisdictionList" id="companyTINJurisdictionLabel">
+                        <h3 className="label-heading">TIN Jurisdiction</h3>
+                        <DropdownWithSearchbar
+                            label="-- Select a country --"
+                            subject="companyTINJurisdiction"
+                            accessibility="Enter company's TIN jurisdiction"
+                            elementList={europeanCountries}
+                            searchbar
+                        />
+                    </label>
 
                     <label htmlFor="companyIndustryTypeList" id="companyIndustryTypeLabel">
                         <h3 className="label-heading">Industry Type</h3>
                         <DropdownWithSearchbar
-                            label="-- Choose an industry type --"
+                            label="-- Select an industry type --"
                             subject="companyIndustryType"
                             accessibility="Choose an industry type"
                             elementList={industryList}
@@ -159,17 +164,20 @@ function DetailsStep() {
 
                     <InputForm
                         name="companyShareCapital"
-                        type="text"
+                        type="number"
                         title={"Share Capital (EUR)"}
                         accessibility="Enter company's share capital in euro"
                     />
 
-                    <InputForm
-                        name="companyPrevYearTurnover"
-                        type="text"
-                        title={"Previous year Turnover (EUR)"}
-                        accessibility="Enter previous year turnover number in euro"
-                    />
+                    <label htmlFor="companyPrevYearTurnoverList" id="companyPrevYearTurnoverLabel">
+                        <h3 className="label-heading">Previous year turnover (EUR)</h3>
+                        <DropdownWithSearchbar
+                            label="-- Select a range --"
+                            subject="companyPrevYearTurnover"
+                            accessibility="Enter previous year turnover number in euro"
+                            elementList={companyTurnoverRange}
+                        />
+                    </label>
 
                     <InputForm
                         name="companyEmail"
@@ -242,7 +250,7 @@ function DetailsStep() {
 
                         <div className={showFiduciaryInput ? "conditional-input show" : "conditional-input hidden"} >
                             <DropdownWithSearchbar
-                                label="-- Choose a fiduciary --"
+                                label="-- Select a fiduciary --"
                                 subject="companyFiduciaryShares"
                                 accessibility="Choose company's fiduciary"
                                 elementList={europeanFiduciaryRoles}
@@ -268,10 +276,10 @@ function DetailsStep() {
                     >
                         <div className={showLicenceInput ? "conditional-input show" : "conditional-input hidden"}>
                             <DropdownWithSearchbar
-                                label="-- Choose a licence --"
+                                label="-- Select a country --"
                                 subject="companyLicence"
                                 accessibility="Choose company's licence"
-                                elementList={europeanCompanyLicenseTypes}
+                                elementList={europeanCountries}
                                 searchbar
                             />
                         </div>
