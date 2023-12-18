@@ -6,7 +6,6 @@ export const europeanCompanyTypes = [
     "Charities / MPOs",
     "Trust",
     "Public Listed Company"
-
 ]
 
 export const europeanCountries = [

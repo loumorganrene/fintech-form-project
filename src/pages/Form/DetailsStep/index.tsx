@@ -1,4 +1,4 @@
-import DropdownWithSearchbar from "../../../components/DropdownWithSearchbar";
+import Dropdown from "../../../components/Dropdown/index.tsx";
 import InputForm from "../../../components/InputForm"
 import { ChangeEvent, useState } from "react";
 import {
@@ -62,17 +62,14 @@ function DetailsStep() {
                         accessibility="Enter company's registration number"
                     />
 
-                    <label htmlFor="companyTypeList" id="companyTypeLabel">
-                        <h3 className="label-heading">Type of Company</h3>
-                        <DropdownWithSearchbar
-                            label="-- Select a type --"
-                            subject="companyType"
-                            accessibility="Choose company's type"
-                            elementList={europeanCompanyTypes}
-                            searchbar
-                            regex="/[A-Za-z]/g"
-                        />
-                    </label>
+                    <Dropdown
+                        title="Type of Company"
+                        id="companyType"
+                        accessibility="Choose company's type"
+                        options={europeanCompanyTypes}
+                        style="classic"
+                    />
+
 
                     <InputForm
                         name="companyTradingName"
@@ -92,22 +89,20 @@ function DetailsStep() {
                         accessibility="Enter company's incorporation's date"
                     />
 
-                    <label htmlFor="companyIncorporationCountryList" id="companyIncorporationCountryLabel">
-                        <h3 className="label-heading">Country of Incorporation</h3>
-                        <DropdownWithSearchbar
-                            label="-- Select a country --"
-                            subject="companyIncorporationCountry"
-                            accessibility="Choose company's country of incorporation"
-                            elementList={europeanCountries}
-                            searchbar
-                        />
-                    </label>
+                    <Dropdown
+                        title="Country of Incorporation"
+                        id="companyIncorporationCountry"
+                        placeholder="Search a country"
+                        accessibility="Choose company's country of incorporation"
+                        options={europeanCountries}
+                        style="searchbar"
+                    />
 
                     <label htmlFor="companyNumberEmployeesList" id="companyNumberEmployeesLabel">
                         <h3 className="label-heading">Number of Employees</h3>
-                        <DropdownWithSearchbar
-                            label="-- Select a range --"
-                            subject="companyNumberEmployees"
+                        <Dropdown
+                            placeholder="-- Select a range --"
+                            id="companyNumberEmployees"
                             accessibility="Choose company's range of employees number"
                             elementList={europeanEmployeeRanges}
                         />
@@ -129,7 +124,7 @@ function DetailsStep() {
 
                     <label htmlFor="companyTINJurisdictionList" id="companyTINJurisdictionLabel">
                         <h3 className="label-heading">TIN Jurisdiction</h3>
-                        <DropdownWithSearchbar
+                        <Dropdown
                             label="-- Select a country --"
                             subject="companyTINJurisdiction"
                             accessibility="Enter company's TIN jurisdiction"
@@ -140,7 +135,7 @@ function DetailsStep() {
 
                     <label htmlFor="companyIndustryTypeList" id="companyIndustryTypeLabel">
                         <h3 className="label-heading">Industry Type</h3>
-                        <DropdownWithSearchbar
+                        <Dropdown
                             label="-- Select an industry type --"
                             subject="companyIndustryType"
                             accessibility="Choose an industry type"
@@ -171,7 +166,7 @@ function DetailsStep() {
 
                     <label htmlFor="companyPrevYearTurnoverList" id="companyPrevYearTurnoverLabel">
                         <h3 className="label-heading">Previous year turnover (EUR)</h3>
-                        <DropdownWithSearchbar
+                        <Dropdown
                             label="-- Select a range --"
                             subject="companyPrevYearTurnover"
                             accessibility="Enter previous year turnover number in euro"
@@ -249,7 +244,7 @@ function DetailsStep() {
                     >
 
                         <div className={showFiduciaryInput ? "conditional-input show" : "conditional-input hidden"} >
-                            <DropdownWithSearchbar
+                            <Dropdown
                                 label="-- Select a fiduciary --"
                                 subject="companyFiduciaryShares"
                                 accessibility="Choose company's fiduciary"
@@ -275,7 +270,7 @@ function DetailsStep() {
                         onChange={handleRadioChecked}
                     >
                         <div className={showLicenceInput ? "conditional-input show" : "conditional-input hidden"}>
-                            <DropdownWithSearchbar
+                            <Dropdown
                                 label="-- Select a country --"
                                 subject="companyLicence"
                                 accessibility="Choose company's licence"
