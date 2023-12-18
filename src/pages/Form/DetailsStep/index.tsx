@@ -13,12 +13,19 @@ import {
 
 function DetailsStep() {
     /* CONDITIONAL INPUT RENDERING*/
+    const [showOtherIndustryInput, setShowOtherIndustryInput] = useState(false)
     const [showGroupInput, setShowGroupInput] = useState(false)
     const [showFiduciaryInput, setShowFiduciaryInput] = useState(false)
     const [showLicenceInput, setShowLicenceInput] = useState(false)
 
     const handleRadioChecked = (event: ChangeEvent<HTMLInputElement | HTMLSelectElement>) => {
         const { name, value } = event.target
+
+        if (name ==="companyIndustryType" && value === "Other Industry") {
+            setShowOtherIndustryInput(true)
+        } else {
+            setShowOtherIndustryInput(false)
+        }
 
         if (name === "companyGroupChoice" && value === "Yes") {
             setShowGroupInput(true)
@@ -65,6 +72,7 @@ function DetailsStep() {
                     <Dropdown
                         title="Type of Company"
                         id="companyType"
+                        placeholder="Select a type"
                         accessibility="Choose company's type"
                         options={europeanCompanyTypes}
                         style="classic"
@@ -98,15 +106,14 @@ function DetailsStep() {
                         style="searchbar"
                     />
 
-                    <label htmlFor="companyNumberEmployeesList" id="companyNumberEmployeesLabel">
-                        <h3 className="label-heading">Number of Employees</h3>
-                        <Dropdown
-                            placeholder="-- Select a range --"
-                            id="companyNumberEmployees"
-                            accessibility="Choose company's range of employees number"
-                            elementList={europeanEmployeeRanges}
-                        />
-                    </label>
+                    <Dropdown
+                        title="Number of Employees"
+                        id="companyNumberEmployees"
+                        placeholder="Select a range"
+                        accessibility="Choose company's range of employees number"
+                        options={europeanEmployeeRanges}
+                        style="classic"
+                    />
 
                     <InputForm
                         name="companyVAT"
@@ -122,29 +129,25 @@ function DetailsStep() {
                         accessibility="Enter company's tax identification number"
                     />
 
-                    <label htmlFor="companyTINJurisdictionList" id="companyTINJurisdictionLabel">
-                        <h3 className="label-heading">TIN Jurisdiction</h3>
-                        <Dropdown
-                            label="-- Select a country --"
-                            subject="companyTINJurisdiction"
-                            accessibility="Enter company's TIN jurisdiction"
-                            elementList={europeanCountries}
-                            searchbar
-                        />
-                    </label>
+                    <Dropdown
+                        title="TIN Jurisdiction"
+                        id="companyTINJurisdiction"
+                        placeholder="Select a country"
+                        accessibility="Enter company's TIN jurisdiction"
+                        options={europeanCountries}
+                        style="searchbar"
+                    />
 
-                    <label htmlFor="companyIndustryTypeList" id="companyIndustryTypeLabel">
-                        <h3 className="label-heading">Industry Type</h3>
-                        <Dropdown
-                            label="-- Select an industry type --"
-                            subject="companyIndustryType"
-                            accessibility="Choose an industry type"
-                            elementList={industryList}
-                            searchbar
-                        />
-                    </label>
+                    <Dropdown
+                        title="Industry Type"
+                        id="companyIndustryType"
+                        placeholder="Select a type"
+                        accessibility="Choose an industry type"
+                        options={industryList}
+                        style="searchbar"
+                    />
 
-                    <div className="conditional-input">
+                    <div className={showOtherIndustryInput ? "conditional-input show" : "conditional-input hidden"}>
                         <InputForm
                             name="companyIndustryDesc"
                             type="text"
@@ -164,15 +167,14 @@ function DetailsStep() {
                         accessibility="Enter company's share capital in euro"
                     />
 
-                    <label htmlFor="companyPrevYearTurnoverList" id="companyPrevYearTurnoverLabel">
-                        <h3 className="label-heading">Previous year turnover (EUR)</h3>
-                        <Dropdown
-                            label="-- Select a range --"
-                            subject="companyPrevYearTurnover"
-                            accessibility="Enter previous year turnover number in euro"
-                            elementList={companyTurnoverRange}
-                        />
-                    </label>
+                    <Dropdown
+                        title="Previous year turnover (EUR)"
+                        id="companyPrevYearTurnover"
+                        placeholder="Select a range"
+                        accessibility="Enter previous year turnover number in euro"
+                        options={companyTurnoverRange}
+                        style="classic"
+                    />
 
                     <InputForm
                         name="companyEmail"
@@ -245,11 +247,11 @@ function DetailsStep() {
 
                         <div className={showFiduciaryInput ? "conditional-input show" : "conditional-input hidden"} >
                             <Dropdown
-                                label="-- Select a fiduciary --"
-                                subject="companyFiduciaryShares"
+                                id="companyFiduciaryShares"
+                                placeholder="Select a role"
                                 accessibility="Choose company's fiduciary"
-                                elementList={europeanFiduciaryRoles}
-                                searchbar
+                                options={europeanFiduciaryRoles}
+                                style="classic"
                             />
                         </div>
 
@@ -271,11 +273,11 @@ function DetailsStep() {
                     >
                         <div className={showLicenceInput ? "conditional-input show" : "conditional-input hidden"}>
                             <Dropdown
-                                label="-- Select a country --"
-                                subject="companyLicence"
+                                id="companyLicence"
+                                placeholder="Select a country"
                                 accessibility="Choose company's licence"
-                                elementList={europeanCountries}
-                                searchbar
+                                options={europeanCountries}
+                                style="searchbar"
                             />
                         </div>
                     </InputForm>

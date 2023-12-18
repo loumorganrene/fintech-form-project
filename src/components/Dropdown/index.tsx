@@ -1,5 +1,5 @@
-import { useState, useRef, RefObject, ChangeEvent } from 'react'
-// import { useOutsideClick } from '../../hooks/useClickOutside'
+import { useState, useRef, RefObject, ChangeEvent, useEffect } from 'react'
+import { useOutsideClick } from '../../hooks/useClickOutside'
 // import PropTypes from 'prop-types'
 import './Drowpdown.scss'
 
@@ -10,7 +10,6 @@ function Dropdown(
     options,
     accessibility,
     initialValue,
-    onUpdateValue,
     placeholder,
     title,
     style,
@@ -26,11 +25,15 @@ function Dropdown(
   const handleClick = () => {
     setIsExpanded(!isExpanded)
   }
+
+  useOutsideClick({ ref: ulDropdownContainer, onClickOut: () => setIsExpanded(false)})
+
   const handleSelectItem = (option: OptionType) => {
     setSelected(option)
     setUserQuery(option)
     setIsExpanded(!isExpanded)
   }
+
   const handleChange = (e: ChangeEvent<HTMLInputElement>) => {
     const { value } = e.target
     if (value === "") {
