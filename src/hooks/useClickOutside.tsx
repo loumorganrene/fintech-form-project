@@ -1,7 +1,7 @@
 import { RefObject, useEffect } from "react";
 
 interface useOutsideClickProps {
-    ref: RefObject<HTMLUListElement | HTMLDivElement>
+    ref: RefObject<HTMLUListElement | HTMLDivElement | HTMLLIElement | HTMLLabelElement>
     onClickOut: () => void
     deps?: React.DependencyList
 }

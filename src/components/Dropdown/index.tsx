@@ -1,7 +1,7 @@
 // import PropTypes from 'prop-types'
 import './Drowpdown.scss'
 import SearchbarDropdown from './SearchbarDropdown'
-import ClassicDropdown from './ClassicDropdown/index.tsx';
+import ClassicDropdown from './ClassicDropdown';
 
 function Dropdown(
   {
