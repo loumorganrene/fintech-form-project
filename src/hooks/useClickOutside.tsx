@@ -6,7 +6,7 @@ interface useOutsideClickProps {
     deps?: React.DependencyList
 }
 
-export function useOutsideClick({ref, onClickOut, deps}:useOutsideClickProps) {
+function useOutsideClick({ref, onClickOut, deps}:useOutsideClickProps) {
 
     useEffect(() => {
         const onClick = (event: MouseEvent) => {
@@ -23,3 +23,5 @@ export function useOutsideClick({ref, onClickOut, deps}:useOutsideClickProps) {
 
     }, [onClickOut, ref, ...(deps ?? [])])// eslint-disable-line react-hooks/exhaustive-deps
 }
+
+export default useOutsideClick

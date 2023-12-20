@@ -13,19 +13,12 @@ import {
 
 function DetailsStep() {
     /* CONDITIONAL INPUT RENDERING*/
-    const [showOtherIndustryInput, setShowOtherIndustryInput] = useState(false)
     const [showGroupInput, setShowGroupInput] = useState(false)
     const [showFiduciaryInput, setShowFiduciaryInput] = useState(false)
     const [showLicenceInput, setShowLicenceInput] = useState(false)
 
     const handleRadioChecked = (event: ChangeEvent<HTMLInputElement | HTMLSelectElement>) => {
         const { name, value } = event.target
-
-        if (name ==="companyIndustryType" && value === "Other Industry") {
-            setShowOtherIndustryInput(true)
-        } else {
-            setShowOtherIndustryInput(false)
-        }
 
         if (name === "companyGroupChoice" && value === "Yes") {
             setShowGroupInput(true)
@@ -147,7 +140,7 @@ function DetailsStep() {
                         style="searchbar"
                     />
 
-                    <div className={showOtherIndustryInput ? "conditional-input show" : "conditional-input hidden"}>
+                    <div className="conditional-input">
                         <InputForm
                             name="companyIndustryDesc"
                             type="text"
