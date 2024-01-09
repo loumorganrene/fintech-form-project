@@ -1,0 +1,57 @@
+.dropdown__container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  margin-block-end: 1em;
+  max-width: 300px;
+  width: 100%;
+}
+.dropdown__container .dropdown__button--toggle {
+  text-align: center;
+  border-radius: 15px;
+  border: 3px solid var(--dark-clr);
+  background: var(--light-clr);
+  padding: 1.3em 1em;
+  min-height: 2rem;
+  font-weight: var(--xl-fweight);
+  font-size: 1rem;
+  cursor: pointer;
+}
+.dropdown__container .dropdown__button--toggle input[type=search] {
+  border: 0;
+  border-block-end: none;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  height: -moz-fit-content;
+  height: fit-content;
+}
+.dropdown__container .dropdown__menu {
+  position: absolute;
+  top: 3em;
+  max-width: 300px;
+  max-height: 200px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  border: 3px solid var(--dark-clr);
+  border-top: 0;
+  border-radius: 0 0 15px 15px;
+  z-index: 99;
+  background: var(--light-clr);
+  overflow-y: scroll;
+}
+.dropdown__container .dropdown__menu li {
+  cursor: pointer;
+  padding-inline: 1.25em;
+}
+.dropdown__container .dropdown__menu .focus::before {
+  content: " ";
+  position: absolute;
+  left: 0;
+  max-width: 300px;
+  width: 100%;
+  height: 1.625rem;
+  background-color: var(--primary-clr);
+  filter: opacity(30%);
+}/*# sourceMappingURL=Drowpdown.css.map */

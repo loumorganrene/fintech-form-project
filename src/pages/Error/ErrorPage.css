@@ -1,0 +1,8 @@
+.error-page {
+  display: grid;
+  justify-content: center;
+  text-align: center;
+}
+.error-page h2 {
+  font-size: 2rem;
+}/*# sourceMappingURL=ErrorPage.css.map */

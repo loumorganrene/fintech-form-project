@@ -2,7 +2,10 @@ import { useRef } from 'react'
 import useDropdownLogic from '../../../hooks/useDropdownLogic'
 
 function SearchbarDropdown({ id, title, options, placeholder, multipleSelection, initialValue }: DropdownStylePropsT) {
-    const ulDropdownContainer = useRef(null)
+    const divDropdownContainer = useRef(null)
+    const buttonDropdown = useRef(null)
+    const ulDropdownMenu = useRef(null)
+
     const {
         isExpanded,
         selected,
@@ -13,7 +16,9 @@ function SearchbarDropdown({ id, title, options, placeholder, multipleSelection,
         handleKeyNavigation
     } = useDropdownLogic(
         { initialValue },
-        { ref: ulDropdownContainer },
+        { clickRef: divDropdownContainer },
+        // { keyBtnRef: buttonDropdown },
+        { keyMenuRef: ulDropdownMenu },
         { options },
         { placeholder }
     )
@@ -21,13 +26,14 @@ function SearchbarDropdown({ id, title, options, placeholder, multipleSelection,
     return (
         <label htmlFor={id} id={id + "Label"}>
             {title && <h3 className="label-heading">{title}</h3>}
-            <div className="dropdown__container" ref={ulDropdownContainer}>
+            <div className="dropdown__container" ref={divDropdownContainer}>
                 <button
                     className="dropdown__button--toggle"
                     onClick={handleClick}
                     onKeyDown={handleKeyNavigation}
                 >
                     <input
+                        ref={buttonDropdown}
                         type="search"
                         id={id + "Dropdown"}
                         placeholder={placeholder}
@@ -37,15 +43,16 @@ function SearchbarDropdown({ id, title, options, placeholder, multipleSelection,
                 </button>
 
                 {isExpanded &&
-                    <ul id={id + "List"} className="dropdown__menu">
+                    <ul ref={ulDropdownMenu} id={id + "List"} className="dropdown__menu">
                         {options
                             .filter(item => item.toLowerCase().startsWith(userQuery.toLowerCase()))
                             .map((option: OptionType, index) =>
                                 <li
                                     key={"item-" + index}
-                                    className="dropdown--item"
+                                    className={"dropdown--item" + selected === option ? "focus" : ""}
                                     id={"option-" + index + 1}
                                     onClick={() => handleSelectItem(option)}
+                                    tabIndex={isExpanded ? 0 : -1}
                                 >
                                     {option}
                                 </li>

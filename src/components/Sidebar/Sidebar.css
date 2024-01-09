@@ -1,0 +1,16 @@
+aside {
+  display: none;
+}
+@media only screen and (min-width: 768px) {
+  aside {
+    display: flex;
+    justify-content: center;
+    grid-area: sidebar;
+    grid-row: 2/span 2;
+    background-color: var(--primary-clr);
+    color: var(--light-clr);
+    max-width: 100%;
+    box-shadow: var(--right-shadow);
+    z-index: 1;
+  }
+}/*# sourceMappingURL=Sidebar.css.map */

@@ -1,0 +1,17 @@
+.auth-layout__container {
+  display: grid;
+  grid-template-columns: auto;
+  grid-template-rows: [start] 15% [] auto [end] 5%;
+  grid-template-areas: "header" "main" "footer";
+  height: 100vh;
+}
+
+@media only screen and (min-width: 768px) {
+  .auth-layout__container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: [start] 15% [] auto [end] 5%;
+    grid-template-areas: "header header header header" "sidebar main main main" "footer footer footer footer";
+    height: 100vh;
+  }
+}/*# sourceMappingURL=AuthLayout.css.map */

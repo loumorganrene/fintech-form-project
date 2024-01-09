@@ -1,0 +1,47 @@
+label {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  gap: 1em;
+}
+label .label-heading {
+  color: var(--primary-clr);
+  border-inline-start: 0.37em solid var(--dark-clr);
+  padding-inline-start: 0.25em;
+}
+label .label-subheading {
+  color: var(--dark-clr);
+  font-size: 0.75rem;
+}
+
+input {
+  border: 0;
+  border-block-end: 3px solid var(--dark-clr);
+}
+inputinput[type=date] {
+  padding: 0 0.75em;
+}
+input:not([type=radio]):not([type=checkbox]) {
+  height: 2rem;
+  padding: 0 1em;
+  margin-block-end: 1em;
+}
+
+.choice__container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.choice__container input[type=radio] {
+  max-width: -moz-fit-content;
+  max-width: fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  margin-inline-start: 1em;
+}
+
+@media only screen and (min-width: 768px) {
+  input:not([type=checkbox]) label {
+    justify-content: end;
+  }
+}/*# sourceMappingURL=InputForm.css.map */
