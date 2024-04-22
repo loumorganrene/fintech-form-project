@@ -5,7 +5,6 @@
 [![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)](https://legacy.reactjs.org/)
 [![Redux](https://img.shields.io/badge/Redux-593D88?style=for-the-badge&logo=redux&logoColor=white)](https://redux.js.org/)
 [![SASS](https://img.shields.io/badge/SASS-hotpink.svg?style=for-the-badge&logo=SASS&logoColor=white)](https://sass-lang.com/)
-[![React Mini Modal](https://img.shields.io/badge/React%20Mini%20Modal-808080.svg?style=for-the-badge&logo=react&logoColor=white)](https://github.com/loumorganrene/react-mini-modal#react-mini-modal-)
 
 
 A multiple step form for company's application.
